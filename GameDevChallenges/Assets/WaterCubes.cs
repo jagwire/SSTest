@@ -277,7 +277,7 @@ public class WaterCubes : MonoBehaviour {
 					GameObject terrainCube = terrainCubes[indexOf (x,z)];
 
 					float t_height = terrainCube.transform.localScale.y;
-					Vector3 w_position = new Vector3(x, t_height + (height/2.0f), z);
+					Vector3 w_position = new Vector3(x, Mathf.Max (t_height, t_height + (height/2.0f)), z);
 
 					waterCube.transform.position = w_position;
 					waterCube.transform.localScale = new Vector3(1, Mathf.Max (0,height), 1);
