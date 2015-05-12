@@ -63,8 +63,6 @@ public class WaterCubes : MonoBehaviour {
 
 
 	void Start() {
-//		WebCamTexture webTx = new WebCamTexture ();
-//		webTx.Play ();
 
 	}
 
