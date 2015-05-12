@@ -343,7 +343,7 @@ public class WaterCubes : MonoBehaviour {
 			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z+1))] -= 0.5f;
 		}
 
-		Rainfall ();
+		//Rainfall ();
 
 		Outflow ();
 
