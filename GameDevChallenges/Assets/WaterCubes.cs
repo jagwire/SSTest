@@ -304,6 +304,7 @@ public class WaterCubes : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		Debug.Log ("TIME DELTA: " + Time.deltaTime);
 		current_flux = new Flux[size * size];
 		D2 = new float[size * size];
 		waterHeights = new float[size, size];
