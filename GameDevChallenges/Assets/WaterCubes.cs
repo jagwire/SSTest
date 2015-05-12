@@ -115,7 +115,7 @@ public class WaterCubes : MonoBehaviour {
 
 					w_cube.GetComponent<Renderer>().material = waterMaterial;
 				} else {
-					heightValues[x,z] = Random.value/5f;
+					heightValues[x,z] = Random.value/10f;
 				}
 			}
 		}
