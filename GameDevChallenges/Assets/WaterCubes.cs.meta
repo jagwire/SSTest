@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: f2132b71ebe9549469032b8934b41c1c
-timeCreated: 1430252532
+timeCreated: 1431445589
 licenseType: Pro
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - waterMaterial: {fileID: 2100000, guid: 7c31ceea6101e4a73b58c3a3a92b71ae, type: 2}
+  - groundMaterial: {fileID: 2100000, guid: 6806202cb3ea741e6a8c965c2f8d6142, type: 2}
+  - marker: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
