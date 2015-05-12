@@ -299,7 +299,6 @@ public class WaterCubes : MonoBehaviour {
 		waterSurface.GetComponent<TerrainCollider> ().terrainData = d;
 		waterSurface.GetComponent<Terrain> ().Flush ();
 
-
 		//this line is VITAL
 		D1 = D2;
 	}
