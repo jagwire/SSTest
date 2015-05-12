@@ -289,6 +289,17 @@ public class WaterCubes : MonoBehaviour {
 			}
 		}
 
+		TerrainData d = new TerrainData ();
+		d.size = new Vector3 (size,10,size);
+		d.SetHeights (0,0,waterHeights);
+		
+		waterSurface.GetComponent<Terrain> ().terrainData = d;
+		
+		//we add it to the collider also so that we can cast rays and hit the water surface
+		waterSurface.GetComponent<TerrainCollider> ().terrainData = d;
+		waterSurface.GetComponent<Terrain> ().Flush ();
+
+
 		//this line is VITAL
 		D1 = D2;
 	}
@@ -327,14 +338,6 @@ public class WaterCubes : MonoBehaviour {
 		updateHeights ();
 
 
-		TerrainData d = new TerrainData ();
-		d.size = new Vector3 (size,10,size);
-		d.SetHeights (0,0,waterHeights);
 
-		waterSurface.GetComponent<Terrain> ().terrainData = d;
-
-		//we add it to the collider also so that we can cast rays and hit the water surface
-		waterSurface.GetComponent<TerrainCollider> ().terrainData = d;
-		waterSurface.GetComponent<Terrain> ().Flush ();
 	}
 }
