@@ -292,7 +292,7 @@ public class WaterCubes : MonoBehaviour {
 					waterCube.transform.localScale = new Vector3(1, Mathf.Max (0,height), 1);
 
 				}
-				waterHeights[z,x] = height/6;
+				waterHeights[z,x] = Mathf.Max (0, height/6);
 			}
 		}
 
