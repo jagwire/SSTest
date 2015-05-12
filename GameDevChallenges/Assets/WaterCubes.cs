@@ -78,8 +78,8 @@ public class WaterCubes : MonoBehaviour {
 		waterSurface.isStatic = false;
 		waterSurface.GetComponent<Terrain> ().materialType = Terrain.MaterialType.Custom;
 		waterSurface.GetComponent<Terrain> ().materialTemplate = waterMaterial;
-		waterSurface.AddComponent<TerrainMouseOver> ();
-		waterSurface.GetComponent<TerrainMouseOver> ().marker = marker;
+//		waterSurface.AddComponent<TerrainMouseOver> ();
+//		waterSurface.GetComponent<TerrainMouseOver> ().marker = marker;
 		if (useCubes) {
 			cubes = new GameObject[size * size];
 			terrainCubes = new GameObject[size * size];
