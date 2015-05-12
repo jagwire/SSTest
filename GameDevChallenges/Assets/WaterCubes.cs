@@ -144,9 +144,10 @@ public class WaterCubes : MonoBehaviour {
 
 			float height = waterScale.y + 0.2f;
 
-			cubes [indexOf (_x, _z)].transform.localScale = new Vector3 (1, height, 1);
-			waterPosition.y = height / 2.0f;
-			cubes [indexOf (_x, _z)].transform.position = new Vector3(_x, terrainHeight + height/2.0f , _z);
+//			cubes [indexOf (_x, _z)].transform.localScale = new Vector3 (1, height, 1);
+//			waterPosition.y = height / 2.0f;
+//			cubes [indexOf (_x, _z)].transform.position = new Vector3(_x, terrainHeight + height/2.0f , _z);
+			D1[indexOf (_x,_z)] = waterScale.y + 0.2f;
 		} else {
 			D1 [indexOf (_x, _z)] += 0.2f;
 		}
