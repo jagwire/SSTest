@@ -163,7 +163,8 @@ public class WaterCubes : MonoBehaviour {
 				//current height
 				float height = 0.0f;
 				if(useCubes) {
-					if(cubes[indexOf (x,z)].transform.localScale.y == 0) {
+//					if(cubes[indexOf (x,z)].transform.localScale.y == 0) {
+					if(D1[indexOf (_x,_z)] == 0) {
 						current_flux[indexOf (x,z)] = new Flux();
 						continue;
 					}
