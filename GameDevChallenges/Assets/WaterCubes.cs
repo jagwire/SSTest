@@ -168,20 +168,14 @@ public class WaterCubes : MonoBehaviour {
 			for (int z = 0; z < size; z++) {
 
 
-				//current height
-				float height = 0.0f;
-				if(useCubes) {
-//					if(cubes[indexOf (x,z)].transform.localScale.y == 0) {
-					if(D1[indexOf (x,z)] == 0) {
-						current_flux[indexOf (x,z)] = new Flux();
-						continue;
-					}
-
-
-					height = height_of (x,z);
-				} else {
-					height = height_of (x,z);//D1[indexOf (x,z)];
+				if(D1[indexOf (x,z)] == 0) {
+					current_flux[indexOf (x,z)] = new Flux();
+					continue;
 				}
+
+				//current height
+				float height = height_of (x,z);
+
 				float left_height = 0;
 				float right_height = 0;
 				float top_height = 0;
