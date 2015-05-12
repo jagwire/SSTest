@@ -167,7 +167,8 @@ public class WaterCubes : MonoBehaviour {
 		for (int x = 0; x < size; x++) {
 			for (int z = 0; z < size; z++) {
 
-
+				//if the current volume of water for this grid cell is 0, then outflow to each neighbor should be 0
+				//check for this, update current_flux and continue with the next iteration.
 				if(D1[indexOf (x,z)] == 0) {
 					current_flux[indexOf (x,z)] = new Flux();
 					continue;
