@@ -35,6 +35,10 @@ public class WaterCubes : MonoBehaviour {
 	private float[,] waterHeights;
 	private float[] changesInVolume;
 
+
+
+	//I hardcode the time delta because the simulation will explode -> huge spikes of water everywhere, when relying
+	//on Time.deltaTime. From what I can deduce, the system will get bogged down over time and cause the problem.
 	private float deltaTime = 0.02f;
 
 	private int indexOf(int x, int z) {
