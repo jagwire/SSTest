@@ -87,7 +87,7 @@ public class WaterCubes : MonoBehaviour {
 			groundTerrainData = new TerrainData();
 			groundTerrainData.size = new Vector3(size,size,size);
 
-			heightValues = new float[size*size];
+			heightValues = new float[size,size];
 		}
 		for (int x = 0; x < size; x++) {
 			for(int z =  0; z < size; z++) {
