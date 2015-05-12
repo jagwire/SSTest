@@ -50,7 +50,7 @@ public class WaterCubes : MonoBehaviour {
 	}
 
 	private float flux(float flux, float heightDifference) {
-		return Mathf.Max (0, flux + (Time.deltaTime * (Mathf.PI*Mathf.Pow (radiusOfPipe, 2.0f)) * accelerationDueToGravity * heightDifference/1.0f));
+		return Mathf.Max (0, flux + (deltaTime * (Mathf.PI*Mathf.Pow (radiusOfPipe, 2.0f)) * accelerationDueToGravity * heightDifference/1.0f));
 	}
 
 	public float K(float height, Flux F) {
@@ -58,7 +58,7 @@ public class WaterCubes : MonoBehaviour {
 			return 0;
 		}
 
-		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b) * Time.deltaTime);
+		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b) * deltaTime);
 		return Mathf.Min (1,float.IsNaN(k) ? height/float.Epsilon : k);
 	}
 
@@ -252,7 +252,7 @@ public class WaterCubes : MonoBehaviour {
 					int _z = z + 1;
 					t_flow_in = current_flux [indexOf (_x, _z)].b;
 				}
-				changesInVolume [indexOf (x, z)] = Time.deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
+				changesInVolume [indexOf (x, z)] = deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
 				D2[indexOf (x,z)] = D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)];
 
 //				if(useCubes) {
@@ -305,7 +305,7 @@ public class WaterCubes : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("TIME DELTA: " + Time.deltaTime);
+//		Debug.Log ("TIME DELTA: " + deltaTime);
 		current_flux = new Flux[size * size];
 		D2 = new float[size * size];
 		waterHeights = new float[size, size];
