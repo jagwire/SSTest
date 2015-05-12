@@ -318,7 +318,7 @@ public class WaterCubes : MonoBehaviour {
 		waterHeights = new float[size, size];
 		changesInVolume = new float[size * size];
 
-		if(Input.GetMouseButton(0)) { //left click and hold
+		if(Input.GetMouseButtonUp(0)) { //left click and hold
 			Debug.Log ("BOOM!");
 			Vector3 pos = new Vector3();
 
@@ -337,7 +337,7 @@ public class WaterCubes : MonoBehaviour {
 
 
 		}
-		if(Input.GetMouseButton(1)) { //right click and hold
+		if(Input.GetMouseButtonUp(1)) { //right click and hold
 			Vector3 pos = new Vector3();
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;
