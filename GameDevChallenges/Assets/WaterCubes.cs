@@ -264,7 +264,7 @@ public class WaterCubes : MonoBehaviour {
 		}
 	}
 
-	void updateHeights ()
+	void repositionGeometry ()
 	{
 		for (int x = 0; x < size; x++) {
 			for (int z = 0; z < size; z++) {
@@ -335,7 +335,7 @@ public class WaterCubes : MonoBehaviour {
 
 		calculateChangeInVolumes ();
 
-		updateHeights ();
+		repositionGeometry ();
 
 
 
