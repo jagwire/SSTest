@@ -66,6 +66,8 @@ public class WaterCubes : MonoBehaviour {
 
 	}
 
+	TerrainData groundTerrainData;
+
 	void Awake() {
 		D1 = new float[size * size];
 		td = new TerrainData ();
@@ -79,7 +81,11 @@ public class WaterCubes : MonoBehaviour {
 		waterSurface.GetComponent<TerrainMouseOver> ().marker = marker;
 		if (useCubes) {
 			cubes = new GameObject[size * size];
-			terrainCubes = new GameObject[size*size];
+			terrainCubes = new GameObject[size * size];
+		} else {
+			groundTerrainData = new TerrainData();
+			groundTerrainData.size = new Vector3(size,size,size);
+			groundTerrain = Terrain.CreateTerrainGameObject(groundTerrainData);
 		}
 		for (int x = 0; x < size; x++) {
 			for(int z =  0; z < size; z++) {
@@ -106,6 +112,8 @@ public class WaterCubes : MonoBehaviour {
 					w_cube.transform.localScale = new Vector3(1,0,1);
 
 					w_cube.GetComponent<Renderer>().material = waterMaterial;
+				} else {
+					
 				}
 			}
 		}
@@ -243,7 +251,6 @@ public class WaterCubes : MonoBehaviour {
 			}
 		}
 	}
-	
 
 	void updateHeights ()
 	{
