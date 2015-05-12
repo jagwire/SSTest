@@ -67,7 +67,8 @@ public class WaterCubes : MonoBehaviour {
 	}
 
 	TerrainData groundTerrainData;
-
+	GameObject groundTerrain;
+	float[] heightValues;
 	void Awake() {
 		D1 = new float[size * size];
 		td = new TerrainData ();
@@ -86,6 +87,7 @@ public class WaterCubes : MonoBehaviour {
 			groundTerrainData = new TerrainData();
 			groundTerrainData.size = new Vector3(size,size,size);
 			groundTerrain = Terrain.CreateTerrainGameObject(groundTerrainData);
+			heightValues = new float[size*size];
 		}
 		for (int x = 0; x < size; x++) {
 			for(int z =  0; z < size; z++) {
