@@ -119,6 +119,15 @@ public class WaterCubes : MonoBehaviour {
 				}
 			}
 		}
+
+		if (!useCubes) {
+			groundTerrainData.SetHeights(0,0,heightValues);
+			groundTerrain = Terrain.CreateTerrainGameObject(groundTerrainData);
+			groundTerrain.GetComponent<Terrain>().terrainData = groundTerrainData;
+			groundTerrain.GetComponent<TerrainCollider>().terrainData = groundTerrainData;
+			groundTerrain.GetComponent<Terrain>().Flush();
+
+		}
 	}
 
 	public float count = 0;
