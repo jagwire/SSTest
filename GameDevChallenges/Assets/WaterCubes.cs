@@ -336,8 +336,5 @@ public class WaterCubes : MonoBehaviour {
 		calculateChangeInVolumes ();
 
 		repositionGeometry ();
-
-
-
 	}
 }
