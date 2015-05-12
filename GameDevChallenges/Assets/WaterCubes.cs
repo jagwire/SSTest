@@ -68,7 +68,7 @@ public class WaterCubes : MonoBehaviour {
 
 	TerrainData groundTerrainData;
 	GameObject groundTerrain;
-	float[] heightValues;
+	float[,] heightValues;
 	void Awake() {
 		D1 = new float[size * size];
 		td = new TerrainData ();
@@ -115,7 +115,7 @@ public class WaterCubes : MonoBehaviour {
 
 					w_cube.GetComponent<Renderer>().material = waterMaterial;
 				} else {
-					heightValues[indexOf (x,z)] = Random.value*3f;
+					heightValues[x,z] = Random.value*3f;
 				}
 			}
 		}
