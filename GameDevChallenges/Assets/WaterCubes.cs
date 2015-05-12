@@ -231,7 +231,6 @@ public class WaterCubes : MonoBehaviour {
 	{
 		for (int x = 0; x < size; x++) {
 			for (int z = 0; z < size; z++) {
-				//				Cell current = water_cells[x, 0, z];
 				Flux outflow = current_flux [indexOf (x, z)];
 				float r_flow_in = 0;
 				float l_flow_in = 0;
@@ -261,14 +260,6 @@ public class WaterCubes : MonoBehaviour {
 				}
 				changesInVolume [indexOf (x, z)] = deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
 				D2[indexOf (x,z)] = D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)];
-
-//				if(useCubes) {
-////					D2 [indexOf (x, z)] = cubes [indexOf (x, z)].transform.localScale.y + changesInVolume [indexOf (x, z)];
-//					D2[indexOf (x,z)] = D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)];
-//				} else {
-//					D2[indexOf (x,z)] = D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)];
-//				}
-
 			}
 		}
 	}
