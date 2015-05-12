@@ -44,7 +44,7 @@ public class WaterCubes : MonoBehaviour {
 		if (useCubes) {
 			return cubes [indexOf (x, z)].transform.localScale.y + terrainCubes[indexOf (x,z)].transform.localScale.y;
 		} else {
-			return D1[indexOf (x,z)];
+			return D1[indexOf (x,z)] + heightValues[x,z];
 		}
 	}
 
@@ -283,7 +283,7 @@ public class WaterCubes : MonoBehaviour {
 					waterCube.transform.localScale = new Vector3(1, Mathf.Max (0,height), 1);
 
 				}
-				waterHeights[z,x] = height/6;
+				waterHeights[z,x] = heightValues[x,z] + height/6;
 			}
 		}
 
