@@ -282,10 +282,8 @@ public class WaterCubes : MonoBehaviour {
 					waterCube.transform.position = w_position;
 					waterCube.transform.localScale = new Vector3(1, height, 1);
 
-					waterHeights[z,x] = height/6;
-				} else {
-					waterHeights[z,x] = height/6;
 				}
+				waterHeights[z,x] = height/6;
 			}
 		}
 
