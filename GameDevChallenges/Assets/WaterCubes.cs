@@ -310,13 +310,13 @@ public class WaterCubes : MonoBehaviour {
 
 		if(Input.GetMouseButton(0)) { //left click and hold
 			Debug.Log ("BOOM!");
-//			Vector3 pos = marker.transform.position;
+			Vector3 pos = new Vector3();
 
 
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;
 			if(Physics.Raycast(ray, out hitInfo)) {
-				Vector3 pos = hitInfo.point;
+				pos = hitInfo.point;
 			}
 
 
