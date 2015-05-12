@@ -35,6 +35,7 @@ public class WaterCubes : MonoBehaviour {
 	private float[,] waterHeights;
 	private float[] changesInVolume;
 
+	private float deltaTime = 0.02f;
 
 	private int indexOf(int x, int z) {
 		return x + z*size;
