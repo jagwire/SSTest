@@ -280,7 +280,7 @@ public class WaterCubes : MonoBehaviour {
 					Vector3 w_position = new Vector3(x, t_height + (height/2.0f), z);
 
 					waterCube.transform.position = w_position;
-					waterCube.transform.localScale = new Vector3(1, height, 1);
+					waterCube.transform.localScale = new Vector3(1, Mathf.Max (0,height), 1);
 
 				}
 				waterHeights[z,x] = height/6;
