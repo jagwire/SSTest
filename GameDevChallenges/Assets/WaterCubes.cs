@@ -89,6 +89,10 @@ public class WaterCubes : MonoBehaviour {
 	GameObject groundTerrain;
 	float[,] heightValues;
 	void Awake() {
+
+		 fluxMultiplier = deltaTime*Mathf.PI*Mathf.Pow(radiusOfPipe,2.0f)*accelerationDueToGravity;
+
+
 		D1 = new float[size * size];
 		td = new TerrainData ();
 		td.size = new Vector3 (10, 10, 1);
