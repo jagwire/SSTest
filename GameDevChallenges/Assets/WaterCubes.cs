@@ -17,7 +17,9 @@ public class WaterCubes : MonoBehaviour {
 			Flux out = new Flux ();
 
 			out.l = left.l - right.l;
-			out.ref = left.r - right.r;
+			out.r = left.r - right.r;
+			out.b = left.b - right.b;
+			out.t = left.t - right.t;
 			return out;
 
 		}
