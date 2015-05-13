@@ -108,7 +108,7 @@ public class WaterCubes : MonoBehaviour {
 
 					GameObject t_cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
 					terrainCubes[indexOf (x,z)] = t_cube;
-					float t_height = Random.value * 3f;
+					float t_height = 0.0f;// Random.value * 3f;
 //					float t_height = x/3.0f;
 					t_cube.transform.position = new Vector3(x,t_height/2.0f,z);
 					t_cube.transform.localScale = new Vector3(1, t_height, 1);
