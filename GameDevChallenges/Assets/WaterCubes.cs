@@ -209,15 +209,29 @@ public class WaterCubes : MonoBehaviour {
 					next.t = flux (current.t, height - top_height);
 				}
 
-				if(next.l + next.r + next.t + next.b > height) {
+				float sum = next.l + next.r + next.t + next.b;
+				Flux weights = new Flux();
+				weights.l = next.l / sum;
+				weights.r = next.r / sum;
+				weights.b = next.b /sum;
+				weights.t = next.t / sum;
 
-					float multiplier = K (height, next);
+				next.l = weights.l * height;
+				next.r = weights.r * height;
+				next.b = weights.b * height;
+				next.t = weights.t * height;
 
-					next.l *= multiplier;
-					next.r *= multiplier;
-					next.b *= multiplier;
-					next.t *= multiplier;
-				}
+
+
+//				if(next.l + next.r + next.t + next.b > height) {
+//
+//					float multiplier = K (height, next);
+//
+//					next.l *= multiplier;
+//					next.r *= multiplier;
+//					next.b *= multiplier;
+//					next.t *= multiplier;
+//				}
 				current_flux [indexOf (x, z)] = next;
 			}
 		}
