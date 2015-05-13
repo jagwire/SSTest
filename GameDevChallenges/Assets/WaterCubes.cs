@@ -14,13 +14,13 @@ public class WaterCubes : MonoBehaviour {
 		}
 
 		public static Flux operator -(Flux left, Flux right) {
-			Flux out;
+			Flux ret;
 
-			out.l = left.l - right.l;
-			out.r = left.r - right.r;
-			out.b = left.b - right.b;
-			out.t = left.t - right.t;
-			return out;
+			ret.l = left.l - right.l;
+			ret.r = left.r - right.r;
+			ret.b = left.b - right.b;
+			ret.t = left.t - right.t;
+			return ret;
 
 		}
 	};
