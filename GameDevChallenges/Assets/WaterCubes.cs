@@ -197,6 +197,7 @@ public class WaterCubes : MonoBehaviour {
 					int _z = z;
 					left_height = height_of (_x, _z);
 					next.l = flux (current.l, height - left_height);
+
 				}
 				if (x <= size - 2) {
 					//right neighbor eligible
@@ -204,6 +205,7 @@ public class WaterCubes : MonoBehaviour {
 					int _z = z;
 					right_height = height_of (_x, _z);
 					next.r = flux (current.r, height - right_height);
+
 				}
 				if (z >= 1) {
 					//bottom neighbor eligible
