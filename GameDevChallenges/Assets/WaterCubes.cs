@@ -163,7 +163,7 @@ public class WaterCubes : MonoBehaviour {
 			Vector3 waterPosition = cubes [indexOf (_x, _z)].transform.position;
 			Vector3 waterScale = cubes [indexOf (_x, _z)].transform.localScale;
 
-			D1[indexOf (_x,_z)] = waterScale.y + 0.2f;
+			D1[indexOf (_x,_z)] += 0.2f;
 		} else {
 			D1 [indexOf (_x, _z)] += 0.2f;
 		}
