@@ -206,15 +206,15 @@ public class WaterCubes : MonoBehaviour {
 				}
 
 				//Debug.LogError("outflow: "+(next.l + next.r + next.t + next.b)+" | volume: "+height);
-				if(next.l + next.r + next.t + next.b > height) {
-
-					float multiplier = K (height, next);
-
-					next.l *= multiplier;
-					next.r *= multiplier;
-					next.b *= multiplier;
-					next.t *= multiplier;
-				}
+//				if(next.l + next.r + next.t + next.b > height) {
+//
+//					float multiplier = K (height, next);
+//
+//					next.l *= multiplier;
+//					next.r *= multiplier;
+//					next.b *= multiplier;
+//					next.t *= multiplier;
+//				}
 				current_flux [indexOf (x, z)] = next;
 			}
 		}
