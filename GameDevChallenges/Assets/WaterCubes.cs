@@ -14,7 +14,7 @@ public class WaterCubes : MonoBehaviour {
 		}
 
 		public static Flux operator -(Flux left, Flux right) {
-			Flux out = new Flux ();
+			Flux out;
 
 			out.l = left.l - right.l;
 			out.r = left.r - right.r;
