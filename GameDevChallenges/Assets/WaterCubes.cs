@@ -12,6 +12,10 @@ public class WaterCubes : MonoBehaviour {
 		public bool isZero() {
 			return l == 0 && r == 0 && t == 0 && b == 0;
 		}
+
+		public static Flux operator -(Flux left, Flux right) {
+
+		}
 	};
 
 	public IHeights terrainHeights;
