@@ -205,7 +205,7 @@ public class WaterCubes : MonoBehaviour {
 					next.t = flux (current.t, height - top_height);
 				}
 
-				Debug.LogError("outflow: "+(next.l + next.r + next.t + next.b)+" | volume: "+height);
+				//Debug.LogError("outflow: "+(next.l + next.r + next.t + next.b)+" | volume: "+height);
 				if(next.l + next.r + next.t + next.b > height) {
 
 					float multiplier = K (height, next);
