@@ -148,13 +148,6 @@ public class WaterCubes : MonoBehaviour {
 			Vector3 waterPosition = cubes [indexOf (_x, _z)].transform.position;
 			Vector3 waterScale = cubes [indexOf (_x, _z)].transform.localScale;
 
-			float terrainHeight = terrainCubes[indexOf (_x,_z)].transform.localScale.y;
-
-			float height = waterScale.y + 0.2f;
-
-//			cubes [indexOf (_x, _z)].transform.localScale = new Vector3 (1, height, 1);
-//			waterPosition.y = height / 2.0f;
-//			cubes [indexOf (_x, _z)].transform.position = new Vector3(_x, terrainHeight + height/2.0f , _z);
 			D1[indexOf (_x,_z)] = waterScale.y + 0.2f;
 		} else {
 			D1 [indexOf (_x, _z)] += 0.2f;
@@ -211,12 +204,16 @@ public class WaterCubes : MonoBehaviour {
 					top_height = height_of (_x, _z);
 					next.t = flux (current.t, height - top_height);
 				}
-				float multiplier = K (height, next);
 
-				next.l *= multiplier;
-				next.r *= multiplier;
-				next.b *= multiplier;
-				next.t *= multiplier;
+				if(next.l + next.r + next.t + next.b > height) {
+
+					float multiplier = K (height, next);
+
+					next.l *= multiplier;
+					next.r *= multiplier;
+					next.b *= multiplier;
+					next.t *= multiplier;
+				}
 				current_flux [indexOf (x, z)] = next;
 			}
 		}
