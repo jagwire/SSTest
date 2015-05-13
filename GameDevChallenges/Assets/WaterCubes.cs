@@ -87,9 +87,9 @@ public class WaterCubes : MonoBehaviour {
 	float[,] heightValues;
 	private float fluxMultiplier;
 	void Awake() {
-		float areaOfPipe = Mathf.PI * Mathf.Pow (1, 2.0);
+		float areaOfPipe = Mathf.PI * Mathf.Pow (1, 2.0); //Pi * Radius^2
 
-		 fluxMultiplier = deltaTime*Mathf.PI*Mathf.Pow(radiusOfPipe,2.0f)*accelerationDueToGravity;
+		 fluxMultiplier = deltaTime*areaOfPipe*accelerationDueToGravity;
 
 
 		D1 = new float[size * size];
