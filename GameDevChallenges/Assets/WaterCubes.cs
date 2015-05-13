@@ -58,7 +58,7 @@ public class WaterCubes : MonoBehaviour {
 
 	private float height_of(int x, int z) {
 		if (useCubes) {
-			return cubes [indexOf (x, z)].transform.localScale.y + terrainCubes[indexOf (x,z)].transform.localScale.y;
+			return D1[indexOf (x,z)] + terrainCubes[indexOf (x,z)].transform.localScale.y;
 		} else {
 			return D1[indexOf (x,z)] + heightValues[x,z];
 		}
