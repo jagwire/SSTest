@@ -65,10 +65,7 @@ public class WaterCubes : MonoBehaviour {
 	}
 
 	private float flux(float flux, float heightDifference) {
-		return Mathf.Max (0, flux + (deltaTime //time step
-		                             * (Mathf.PI*Mathf.Pow (radiusOfPipe, 2.0f)) //Cross section of the pipe -> PI * R^2
-		                             * accelerationDueToGravity //9.8 m/s^2
-		                             * heightDifference/1.0f)); //height difference over length of pipe
+		return Mathf.Max (0, flux + heightDifference*fluxMultiplier);
 	}
 
 	public float K(float height, Flux F) {
