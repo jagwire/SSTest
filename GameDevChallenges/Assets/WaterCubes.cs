@@ -112,7 +112,7 @@ public class WaterCubes : MonoBehaviour {
 					float t_height = 0.0f;// Random.value * 3f;
 //					float t_height = x/3.0f;
 
-					if(x < size/2) { t_height = 1.0f; }
+					if(x == size/2) { t_height = 1.0f; }
 
 					t_cube.transform.position = new Vector3(x,t_height/2.0f,z);
 					t_cube.transform.localScale = new Vector3(1, t_height, 1);
