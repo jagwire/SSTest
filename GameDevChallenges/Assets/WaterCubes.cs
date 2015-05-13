@@ -39,7 +39,7 @@ public class WaterCubes : MonoBehaviour {
 
 	//I hardcode the time delta because the simulation will explode -> huge spikes of water everywhere, when relying
 	//on Time.deltaTime. From what I can deduce, the system will get bogged down over time and cause the problem.
-	private float deltaTime = 0.02f;
+	private float deltaTime = 0.02f; //~ 50 frames per second
 
 	private int indexOf(int x, int z) {
 		return x + z*size;
@@ -109,10 +109,10 @@ public class WaterCubes : MonoBehaviour {
 					GameObject t_cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
 					terrainCubes[indexOf (x,z)] = t_cube;
 
-					float t_height = 0.0f;// Random.value * 3f;
+					float t_height = x*0.02f;// Random.value * 3f;
 //					float t_height = x/3.0f;
 
-					if(x == size/2) { t_height = 1.0f; }
+//					if(x == size/2) { t_height = 1.0f; }
 
 					t_cube.transform.position = new Vector3(x,t_height/2.0f,z);
 					t_cube.transform.localScale = new Vector3(1, t_height, 1);
