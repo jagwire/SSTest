@@ -109,7 +109,7 @@ public class WaterCubes : MonoBehaviour {
 					GameObject t_cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
 					terrainCubes[indexOf (x,z)] = t_cube;
 
-					float t_height = x*0.02f;// Random.value * 3f;
+					float t_height = x*0.05f;// Random.value * 3f;
 //					float t_height = x/3.0f;
 
 //					if(x == size/2) { t_height = 1.0f; }
