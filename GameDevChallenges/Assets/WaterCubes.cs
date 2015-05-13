@@ -65,7 +65,7 @@ public class WaterCubes : MonoBehaviour {
 	}
 
 	private float flux(float flux, float heightDifference) {
-		return Mathf.Max (0, flux + (deltaTime //time step
+		return Mathf.Max (0,  (deltaTime //time step
 		                             * (Mathf.PI*Mathf.Pow (radiusOfPipe, 2.0f)) //Cross section of the pipe -> PI * R^2
 		                             * accelerationDueToGravity //9.8 m/s^2
 		                             * heightDifference/1.0f)); //height difference over length of pipe
@@ -258,23 +258,23 @@ public class WaterCubes : MonoBehaviour {
 				float t_flow_in = 0;
 				float b_flow_in = 0;
 				if (x >= 1) {
-					//left neighbor
+					//left neighbor, flowing to the right
 					l_flow_in = current_flux [indexOf (x - 1, z)].r;
 				}
 				if (x <= size - 2) {
-					//right neighbor eligible
+					//right neighbor eligible, flowing to the left
 					int _x = x + 1;
 					int _z = z;
 					r_flow_in = current_flux [indexOf (_x, _z)].l;
 				}
 				if (z >= 1) {
-					//bottom neighbor eligible
+					//bottom neighbor eligible, flowing to toward the top
 					int _x = x;
 					int _z = z - 1;
 					b_flow_in = current_flux [indexOf (_x, _z)].t;
 				}
 				if (z <= size - 2) {
-					//top neighbor eligible
+					//top neighbor eligible, flowing toward the bottom
 					int _x = x;
 					int _z = z + 1;
 					t_flow_in = current_flux [indexOf (_x, _z)].b;
