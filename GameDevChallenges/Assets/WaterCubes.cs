@@ -204,7 +204,7 @@ public class WaterCubes : MonoBehaviour {
 					top_height = height_of (_x, _z);
 					next.t = flux (current.t, height - top_height);
 				}
-
+				next.l = next.b = next.t = next.r = K (height, next);
 				//Debug.LogError("outflow: "+(next.l + next.r + next.t + next.b)+" | volume: "+height);
 //				if(next.l + next.r + next.t + next.b > height) {
 //
@@ -214,7 +214,7 @@ public class WaterCubes : MonoBehaviour {
 //					next.r *= multiplier;
 //					next.b *= multiplier;
 //					next.t *= multiplier;
-//				}
+////				}
 				current_flux [indexOf (x, z)] = next;
 			}
 		}
