@@ -176,27 +176,28 @@ public class Water : MonoBehaviour {
 		for (int x = 0; x < size; x++) {
 			for (int z = 0; z < size; z++) {
 				Flux outflow = currentFlux [indexOf (x, z)];
-				float r_flow_in = 0;
-				float l_flow_in = 0;
-				float t_flow_in = 0;
-				float b_flow_in = 0;
+				float rightInflow = 0;
+				float leftInflow = 0;
+				float topInflow = 0;
+				float bottomInflow = 0;
 				if (x >= 1) {
 					//left neighbor, flowing to the right
-					l_flow_in = currentFlux [indexOf (x - 1, z)].r;
+					leftInflow = currentFlux [indexOf (x - 1, z)].r;
 				}
 				if (x <= size - 2) {
 					//right neighbor eligible, flowing to the left
-					r_flow_in = currentFlux [indexOf (x+1, z)].l;
+					rightInflow = currentFlux [indexOf (x+1, z)].l;
 				}
 				if (z >= 1) {
 					//bottom neighbor eligible, flowing to toward the top
-					b_flow_in = currentFlux [indexOf (x, z-1)].t;
+					bottomInflow = currentFlux [indexOf (x, z-1)].t;
 				}
 				if (z <= size - 2) {
 					//top neighbor eligible, flowing toward the bottom
-					t_flow_in = currentFlux [indexOf (x, z+1)].b;
+					topInflow = currentFlux [indexOf (x, z+1)].b;
 				}
-				changesInVolume [indexOf (x, z)] = deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
+				changesInVolume [indexOf (x, z)] = deltaTime * ((leftInflow + rightInflow + topInflow + bottomInflow)
+				                                                - (outflow.l + outflow.r + outflow.t + outflow.b));
 				D2[indexOf (x,z)] = Mathf.Max(0, D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)]);
 			}
 		}
