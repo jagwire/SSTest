@@ -210,18 +210,7 @@ public class Water : MonoBehaviour {
 				
 				float height = D2[indexOf (x,z)];
 				if(float.IsNaN(height)) { height = 0; }
-				
-				if(useCubes) {
-					GameObject waterCube = cubes [indexOf (x, z)];
-					GameObject terrainCube = terrainCubes[indexOf (x,z)];
-					
-					float t_height = terrainCube.transform.localScale.y;
-					Vector3 w_position = new Vector3(x, Mathf.Max (t_height, t_height + (height/2.0f)), z);
-					
-					waterCube.transform.position = w_position;
-					waterCube.transform.localScale = new Vector3(1, Mathf.Max (0,height), 1);
-					
-				}
+
 				waterHeights[z,x] = Mathf.Max (0, height/6);
 			}
 		}
