@@ -244,7 +244,7 @@ public class WaterCubes : MonoBehaviour {
 
 				Debug.Log ("TOTAL OUTFLOW: "+(next.l+next.r+next.b+next.t));
 
-				if(next.l + next.r + next.t + next.b > D1[indexOf (x,z)) {
+				if(next.l + next.r + next.t + next.b > D1[indexOf (x,z)]) {
 
 //					float sum = next.l + next.r + next.t + next.b;
 //					Flux weight;
