@@ -277,9 +277,6 @@ public class WaterCubes : MonoBehaviour {
 				}
 				changesInVolume [indexOf (x, z)] = deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
 				D2[indexOf (x,z)] = Mathf.Max(0, D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)]);
-				if(changesInVolume[indexOf (x,z)] != 0) {
-					Debug.Log ("CHANGE IN VOLUME FOR: "+x+","+z+"="+changesInVolume[indexOf(x,z)]+"| D2 = "+D2[indexOf (x,z)]);
-				}
 			}
 		}
 	}
@@ -323,14 +320,14 @@ public class WaterCubes : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-//		Debug.Log ("TIME DELTA: " + deltaTime);
+
 		current_flux = new Flux[size * size];
 		D2 = new float[size * size];
 		waterHeights = new float[size, size];
 		changesInVolume = new float[size * size];
 
-		if(Input.GetMouseButtonUp(1)) { //left click and hold
-			//Debug.Log ("BOOM!");
+		if(Input.GetMouseButtonUp(1)) { //right click 
+
 			Vector3 pos = new Vector3();
 
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -342,7 +339,7 @@ public class WaterCubes : MonoBehaviour {
 			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 1.0f;
 
 		}
-		if(Input.GetMouseButtonUp(5)) { //right click and hold
+		if(Input.GetMouseButtonUp(5)) { //right click
 			Vector3 pos = new Vector3();
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;
@@ -354,14 +351,12 @@ public class WaterCubes : MonoBehaviour {
 
 		}
 
-
-//		if (Input.GetKeyUp (KeyCode.Space) || Input.GetKey(KeyCode.LeftCommand)) {
 			//Rainfall ();
 			Outflow ();
 
 			calculateChangeInVolumes ();
 
 			repositionGeometry ();
-//		}
+
 	}
 }
