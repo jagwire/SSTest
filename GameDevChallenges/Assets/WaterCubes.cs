@@ -74,8 +74,8 @@ public class WaterCubes : MonoBehaviour {
 			return 0;
 		}
 
-//		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b) * deltaTime);
-		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b));
+		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b) * deltaTime);
+//		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b));
 		return Mathf.Min (1,float.IsNaN(k) ? height/float.Epsilon : k);
 	}
 
