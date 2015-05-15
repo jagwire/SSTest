@@ -240,7 +240,16 @@ public class Water : MonoBehaviour {
 		//save the new height values to be used next frame in Rainfall() and Outflow()
 		D1 = D2;
 	}
-	
+
+
+	void updateTerrain() {
+		TerrainData d = new TerrainData ();
+		d.size = new Vector3 (size, size, size);
+		d.SetHeights (0,0,heightValues);
+		groundTerrain.GetComponent<Terrain> ().terrainData = d;
+		groundTerrain.GetComponent<TerrainCollider> ().terrainData = d;
+		groundTerrain.GetComponent<Terrain> ().Flush ();
+	}
 	// Update is called once per frame
 	void Update () {
 		
