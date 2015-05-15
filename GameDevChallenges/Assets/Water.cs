@@ -111,7 +111,6 @@ public class Water : MonoBehaviour {
 		int _z = Mathf.RoundToInt (Random.value * (size-1));
 
 		D1 [indexOf (_x, _z)] += 0.2f;
-
 	}
 	
 	void Outflow ()
