@@ -106,6 +106,8 @@ public class Water : MonoBehaviour {
 		groundTerrain.transform.parent = this.transform;
 		groundTerrain.GetComponent<Terrain>().terrainData = groundTerrainData;
 		groundTerrain.GetComponent<TerrainCollider>().terrainData = groundTerrainData;
+		groundTerrain.GetComponent<Terrain> ().materialType = Terrain.MaterialType.Custom;
+		groundTerrain.GetComponent<Terrain> ().materialTemplate = groundMaterial;
 		groundTerrain.GetComponent<Terrain>().Flush();
 	}
 
