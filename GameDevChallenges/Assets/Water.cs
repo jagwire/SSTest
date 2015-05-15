@@ -274,7 +274,7 @@ public class Water : MonoBehaviour {
 			
 		}
 		
-		Rainfall ();
+		//Rainfall ();
 
 		Outflow ();
 		
