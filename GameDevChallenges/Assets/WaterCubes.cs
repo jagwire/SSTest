@@ -65,7 +65,6 @@ public class WaterCubes : MonoBehaviour {
 	}
 
 	private float flux(float flux, float heightDifference) {
-//		Debug.Log (flux + "+" + heightDifference + "*" + fluxMultiplier + "=" + (flux + heightDifference * fluxMultiplier));
 		return Mathf.Max (0, flux + heightDifference*fluxMultiplier);
 	}
 
@@ -75,7 +74,6 @@ public class WaterCubes : MonoBehaviour {
 		}
 
 		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b) * deltaTime);
-//		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b));
 		return Mathf.Min (1,float.IsNaN(k) ? height/float.Epsilon : k);
 	}
 
@@ -90,9 +88,8 @@ public class WaterCubes : MonoBehaviour {
 	private float fluxMultiplier;
 	void Awake() {
 		float areaOfPipe = Mathf.PI * Mathf.Pow (1f, 2.0f); //Pi * Radius^2
-//		Debug.Log ("AREA OF PIPE: " + areaOfPipe);
 		fluxMultiplier = deltaTime * areaOfPipe*accelerationDueToGravity;
-//		Debug.Log ("FLUX MULTIPLIER: " + fluxMultiplier);
+
 
 		D1 = new float[size * size];
 		td = new TerrainData ();
@@ -102,8 +99,7 @@ public class WaterCubes : MonoBehaviour {
 		waterSurface.isStatic = false;
 		waterSurface.GetComponent<Terrain> ().materialType = Terrain.MaterialType.Custom;
 		waterSurface.GetComponent<Terrain> ().materialTemplate = waterMaterial;
-//		waterSurface.AddComponent<TerrainMouseOver> ();
-//		waterSurface.GetComponent<TerrainMouseOver> ().marker = marker;
+
 		if (useCubes) {
 			cubes = new GameObject[size * size];
 			terrainCubes = new GameObject[size * size];
