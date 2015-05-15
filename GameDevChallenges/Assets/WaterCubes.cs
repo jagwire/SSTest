@@ -361,7 +361,7 @@ public class WaterCubes : MonoBehaviour {
 			}
 
 
-			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 0.5f;
+			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 1.0f;
 //			D1[indexOf (Mathf.RoundToInt(pos.x+1), Mathf.RoundToInt(pos.z))] += 0.5f;
 //			D1[indexOf (Mathf.RoundToInt(pos.x+1), Mathf.RoundToInt(pos.z+1))] += 0.5f;
 //			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z+1))] += 0.5f;
@@ -385,7 +385,7 @@ public class WaterCubes : MonoBehaviour {
 		}
 
 		//Rainfall ();
-
+		if(
 		Outflow ();
 
 		calculateChangeInVolumes ();
