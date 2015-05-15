@@ -105,7 +105,7 @@ public class Water : MonoBehaviour {
 			}
 		}
 		
-		//apply terrain
+		//create and apply terrain
 		groundTerrainData.SetHeights(0,0,heightValues);
 		groundTerrain = Terrain.CreateTerrainGameObject(groundTerrainData);
 		groundTerrain.name = "Ground Terrain";
@@ -249,7 +249,7 @@ public class Water : MonoBehaviour {
 		waterHeights = new float[size, size];
 		changesInVolume = new float[size * size];
 		
-		if(Input.GetMouseButtonUp(1)) { //right click 
+		if(Input.GetMouseButton(1)) { //right click 
 			
 			Vector3 pos = new Vector3();
 			
