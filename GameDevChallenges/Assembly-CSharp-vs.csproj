@@ -51,6 +51,7 @@
      <Compile Include="Assets\MouseOverBehavior.cs" />
      <Compile Include="Assets\MoveUpAndDown.cs" />
      <Compile Include="Assets\TerrainMouseOver.cs" />
+     <Compile Include="Assets\Water.cs" />
      <Compile Include="Assets\WaterCubes.cs" />
      <Compile Include="Assets\WaterSolver.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
