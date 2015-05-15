@@ -180,10 +180,8 @@ public class WaterCubes : MonoBehaviour {
 					current_flux[indexOf (x,z)] = new Flux();
 					continue;
 				}
-
 				//current height
 				float height = totalHeightAt (x,z);
-//				Debug.Log ("PROCESSING: "+x+","+z+" height -> "+height);
 				float left_height = 0;
 				float right_height = 0;
 				float top_height = 0;
