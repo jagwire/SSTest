@@ -268,7 +268,8 @@ public class Water : MonoBehaviour {
 				pos = hitInfo.point;
 			}
 			
-			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 1.0f;
+//			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 1.0f;
+			heightValues[Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z)] += 0.001f;
 			
 		}
 		if(Input.GetMouseButtonUp(5)) { //right click
