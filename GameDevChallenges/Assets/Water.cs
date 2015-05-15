@@ -269,7 +269,7 @@ public class Water : MonoBehaviour {
 			}
 			
 //			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 1.0f;
-			heightValues[Mathf.RoundToInt(pos.z), Mathf.RoundToInt(pos.x)] += 0.001f;
+			heightValues[Mathf.RoundToInt(pos.z), Mathf.RoundToInt(pos.x)] += 0.005f;
 			updateTerrain ();
 			
 		}
