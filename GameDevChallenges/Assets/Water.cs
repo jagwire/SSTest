@@ -125,14 +125,16 @@ public class Water : MonoBehaviour {
 					continue;
 				}
 				
-				//current height
+				//current height including terrain height
 				float height = totalHeightAt (x,z);
+
 				float left_height = 0;
 				float right_height = 0;
 				float top_height = 0;
 				float bottom_height = 0;
 				Flux current = currentFlux[indexOf (x,z)];
 				Flux next = new Flux();
+
 				if (x >= 1) {
 					//left neighbor
 					left_height = totalHeightAt (x-1, z);
