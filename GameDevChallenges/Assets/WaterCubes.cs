@@ -90,9 +90,9 @@ public class WaterCubes : MonoBehaviour {
 	private float fluxMultiplier;
 	void Awake() {
 		float areaOfPipe = Mathf.PI * Mathf.Pow (1f, 2.0f); //Pi * Radius^2
-		Debug.Log ("AREA OF PIPE: " + areaOfPipe);
+//		Debug.Log ("AREA OF PIPE: " + areaOfPipe);
 		fluxMultiplier = deltaTime * areaOfPipe*accelerationDueToGravity;
-		Debug.Log ("FLUX MULTIPLIER: " + fluxMultiplier);
+//		Debug.Log ("FLUX MULTIPLIER: " + fluxMultiplier);
 
 		D1 = new float[size * size];
 		td = new TerrainData ();
@@ -189,7 +189,7 @@ public class WaterCubes : MonoBehaviour {
 
 				//current height
 				float height = totalHeightAt (x,z);
-				Debug.Log ("PROCESSING: "+x+","+z+" height -> "+height);
+//				Debug.Log ("PROCESSING: "+x+","+z+" height -> "+height);
 				float left_height = 0;
 				float right_height = 0;
 				float top_height = 0;
@@ -227,38 +227,10 @@ public class WaterCubes : MonoBehaviour {
 					int _z = z + 1;
 					top_height = totalHeightAt (_x, _z);
 					next.t = flux (current.t, height - top_height);
-//					Debug.Log ("TOP OUTFLOW: "+next.t);
 				}
 
-//				float sum = next.l + next.r + next.t + next.b;
-//				Flux weights = new Flux();
-//				weights.l = next.l / sum;
-//				weights.r = next.r / sum;
-//				weights.b = next.b /sum;
-//				weights.t = next.t / sum;
-//
-//				next.l = weights.l * height;
-//				next.r = weights.r * height;
-//				next.b = weights.b * height;
-//				next.t = weights.t * height;
-
-				Debug.Log ("TOTAL OUTFLOW: "+(next.l+next.r+next.b+next.t));
 
 				if(next.l + next.r + next.t + next.b > D1[indexOf (x,z)]) {
-
-//					float sum = next.l + next.r + next.t + next.b;
-//					Flux weight;
-//					weight.l = next.l/sum;
-//					weight.r = next.r/sum;
-//					weight.b = next.b/sum;
-//					weight.t = next.t/sum;
-//
-//					next.l = height*weight.l;
-//					next.r = height*weight.r;
-//					next.b = height*weight.b;
-//					next.t = height*weight.t;
-
-
 
 					float multiplier = K (D1[indexOf (x,z)], next);
 
