@@ -303,9 +303,8 @@ public class WaterCubes : MonoBehaviour {
 					t_flow_in = current_flux [indexOf (_x, _z)].b;
 				}
 				changesInVolume [indexOf (x, z)] = deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
-
-				Debug.Log ("CHANGE IN VOLUME FOR: "+x+","+z+"="+changesInVolume[indexOf(x,z)]+"| D2 = "+D2[indexOf (x,z)]);
 				D2[indexOf (x,z)] = D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)];
+				Debug.Log ("CHANGE IN VOLUME FOR: "+x+","+z+"="+changesInVolume[indexOf(x,z)]+"| D2 = "+D2[indexOf (x,z)]);
 			}
 		}
 	}
