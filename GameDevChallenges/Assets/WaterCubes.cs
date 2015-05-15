@@ -65,7 +65,7 @@ public class WaterCubes : MonoBehaviour {
 	}
 
 	private float flux(float flux, float heightDifference) {
-		Debug.Log (flux + "+" + heightDifference + "*" + fluxMultiplier + "=" + (flux + heightDifference * fluxMultiplier));
+//		Debug.Log (flux + "+" + heightDifference + "*" + fluxMultiplier + "=" + (flux + heightDifference * fluxMultiplier));
 		return Mathf.Max (0, flux + heightDifference*fluxMultiplier);
 	}
 
