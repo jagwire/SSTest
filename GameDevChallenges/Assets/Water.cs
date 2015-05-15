@@ -263,6 +263,7 @@ public class Water : MonoBehaviour {
 		}
 		
 		Rainfall ();
+
 		Outflow ();
 		
 		calculateChangeInVolumes ();
