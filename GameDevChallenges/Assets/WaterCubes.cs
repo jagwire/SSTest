@@ -350,7 +350,7 @@ public class WaterCubes : MonoBehaviour {
 		changesInVolume = new float[size * size];
 
 		if(Input.GetMouseButtonUp(1)) { //left click and hold
-			Debug.Log ("BOOM!");
+			//Debug.Log ("BOOM!");
 			Vector3 pos = new Vector3();
 
 
