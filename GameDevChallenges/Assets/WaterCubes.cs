@@ -91,7 +91,7 @@ public class WaterCubes : MonoBehaviour {
 		float areaOfPipe = Mathf.PI * Mathf.Pow (1f, 2.0f); //Pi * Radius^2
 
 		 fluxMultiplier = deltaTime*areaOfPipe*accelerationDueToGravity;
-
+		Debug.Log ("FLUX MULTIPLIER: " + fluxMultiplier);
 
 		D1 = new float[size * size];
 		td = new TerrainData ();
