@@ -74,8 +74,7 @@ public class Water : MonoBehaviour {
 	void Awake() {
 		float areaOfPipe = Mathf.PI * Mathf.Pow (radiusOfPipe, 2.0f); //Pi * Radius^2
 		fluxMultiplier = deltaTime * areaOfPipe*accelerationDueToGravity;
-		
-		
+
 		D1 = new float[size * size];
 		td = new TerrainData ();
 		td.size = new Vector3 (10, 10, 1);
@@ -84,57 +83,28 @@ public class Water : MonoBehaviour {
 		waterSurface.isStatic = false;
 		waterSurface.GetComponent<Terrain> ().materialType = Terrain.MaterialType.Custom;
 		waterSurface.GetComponent<Terrain> ().materialTemplate = waterMaterial;
+
+		groundTerrainData = new TerrainData();
+		groundTerrainData.size = new Vector3(size,size,size);
 		
-		if (useCubes) {
-			cubes = new GameObject[size * size];
-			terrainCubes = new GameObject[size * size];
-		} else {
-			groundTerrainData = new TerrainData();
-			groundTerrainData.size = new Vector3(size,size,size);
-			
-			heightValues = new float[size,size];
-		}
+		heightValues = new float[size,size];
+
 		for (int x = 0; x < size; x++) {
 			for(int z =  0; z < size; z++) {
-				
-				
+
 				D1[indexOf (x,z)] = 0.0f;
-				if(useCubes) {
-					Vector3 position = new Vector3(x, 0, z);
-					
-					
-					GameObject t_cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-					terrainCubes[indexOf (x,z)] = t_cube;
-					
-					float t_height = Mathf.Abs(x - size/2) + Mathf.Abs(z - size/2);// Random.value * 3f;
-					//					t_height = Random.value * 3f;
-					
-					t_cube.transform.position = new Vector3(x,t_height/2.0f,z);
-					t_cube.transform.localScale = new Vector3(1, t_height, 1);
-					t_cube.GetComponent<Renderer>().material = groundMaterial;
-					
-					
-					GameObject w_cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-					cubes[indexOf (x,z)] = w_cube;
-					w_cube.transform.position = t_cube.transform.position;
-					w_cube.transform.parent = this.transform;
-					w_cube.transform.localScale = new Vector3(1,0,1);
-					
-					w_cube.GetComponent<Renderer>().material = waterMaterial;
-				} else {
-					heightValues[x,z] = 0.0f;
-				}
+				heightValues[x,z] = 0.0f;
 			}
 		}
 		
-		if (!useCubes) {
+		//apply terrain
 			groundTerrainData.SetHeights(0,0,heightValues);
 			groundTerrain = Terrain.CreateTerrainGameObject(groundTerrainData);
 			groundTerrain.GetComponent<Terrain>().terrainData = groundTerrainData;
 			groundTerrain.GetComponent<TerrainCollider>().terrainData = groundTerrainData;
 			groundTerrain.GetComponent<Terrain>().Flush();
 			
-		}
+
 	}
 	
 	public float count = 0;
