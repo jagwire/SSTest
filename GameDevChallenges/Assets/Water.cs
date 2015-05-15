@@ -186,21 +186,15 @@ public class Water : MonoBehaviour {
 				}
 				if (x <= size - 2) {
 					//right neighbor eligible, flowing to the left
-					int _x = x + 1;
-					int _z = z;
-					r_flow_in = currentFlux [indexOf (_x, _z)].l;
+					r_flow_in = currentFlux [indexOf (x+1, z)].l;
 				}
 				if (z >= 1) {
 					//bottom neighbor eligible, flowing to toward the top
-					int _x = x;
-					int _z = z - 1;
-					b_flow_in = currentFlux [indexOf (_x, _z)].t;
+					b_flow_in = currentFlux [indexOf (x, z-1)].t;
 				}
 				if (z <= size - 2) {
 					//top neighbor eligible, flowing toward the bottom
-					int _x = x;
-					int _z = z + 1;
-					t_flow_in = currentFlux [indexOf (_x, _z)].b;
+					t_flow_in = currentFlux [indexOf (x, z+1)].b;
 				}
 				changesInVolume [indexOf (x, z)] = deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
 				D2[indexOf (x,z)] = Mathf.Max(0, D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)]);
