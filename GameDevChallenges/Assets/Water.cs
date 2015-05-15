@@ -35,7 +35,7 @@ public class Water : MonoBehaviour {
 	TerrainData td;
 	GameObject waterSurface;
 
-	private Flux[] current_flux;
+	private Flux[] currentFlux;
 	private float[] D1;
 	private float[] D2;
 	private float[,] waterHeights;
@@ -121,7 +121,7 @@ public class Water : MonoBehaviour {
 				//if the current volume of water for this grid cell is 0, then outflow to each neighbor should be 0
 				//check for this, update current_flux and continue with the next iteration.
 				if(D1[indexOf (x,z)] == 0) {
-					current_flux[indexOf (x,z)] = new Flux();
+					currentFlux[indexOf (x,z)] = new Flux();
 					continue;
 				}
 				
@@ -131,21 +131,17 @@ public class Water : MonoBehaviour {
 				float right_height = 0;
 				float top_height = 0;
 				float bottom_height = 0;
-				Flux current = current_flux[indexOf (x,z)];
+				Flux current = currentFlux[indexOf (x,z)];
 				Flux next = new Flux();
 				if (x >= 1) {
 					//left neighbor
-					int _x = x - 1;
-					int _z = z;
-					left_height = totalHeightAt (_x, _z);
+					left_height = totalHeightAt (x-1, z);
 					next.l = flux (current.l, height - left_height);
 					
 				}
 				if (x <= size - 2) {
 					//right neighbor eligible
-					int _x = x + 1;
-					int _z = z;
-					right_height = totalHeightAt (_x, _z);
+					right_height = totalHeightAt (x+1, z);
 					next.r = flux (current.r, height - right_height);
 				}
 				if (z >= 1) {
@@ -172,7 +168,7 @@ public class Water : MonoBehaviour {
 					next.b *= multiplier;
 					next.t *= multiplier;
 				}
-				current_flux [indexOf (x, z)] = next;
+				currentFlux [indexOf (x, z)] = next;
 			}
 		}
 	}
@@ -181,32 +177,32 @@ public class Water : MonoBehaviour {
 	{
 		for (int x = 0; x < size; x++) {
 			for (int z = 0; z < size; z++) {
-				Flux outflow = current_flux [indexOf (x, z)];
+				Flux outflow = currentFlux [indexOf (x, z)];
 				float r_flow_in = 0;
 				float l_flow_in = 0;
 				float t_flow_in = 0;
 				float b_flow_in = 0;
 				if (x >= 1) {
 					//left neighbor, flowing to the right
-					l_flow_in = current_flux [indexOf (x - 1, z)].r;
+					l_flow_in = currentFlux [indexOf (x - 1, z)].r;
 				}
 				if (x <= size - 2) {
 					//right neighbor eligible, flowing to the left
 					int _x = x + 1;
 					int _z = z;
-					r_flow_in = current_flux [indexOf (_x, _z)].l;
+					r_flow_in = currentFlux [indexOf (_x, _z)].l;
 				}
 				if (z >= 1) {
 					//bottom neighbor eligible, flowing to toward the top
 					int _x = x;
 					int _z = z - 1;
-					b_flow_in = current_flux [indexOf (_x, _z)].t;
+					b_flow_in = currentFlux [indexOf (_x, _z)].t;
 				}
 				if (z <= size - 2) {
 					//top neighbor eligible, flowing toward the bottom
 					int _x = x;
 					int _z = z + 1;
-					t_flow_in = current_flux [indexOf (_x, _z)].b;
+					t_flow_in = currentFlux [indexOf (_x, _z)].b;
 				}
 				changesInVolume [indexOf (x, z)] = deltaTime * ((l_flow_in + r_flow_in + t_flow_in + b_flow_in) - (outflow.l + outflow.r + outflow.t + outflow.b));
 				D2[indexOf (x,z)] = Mathf.Max(0, D1[indexOf (x,z)] + changesInVolume[indexOf (x,z)]);
@@ -254,7 +250,7 @@ public class Water : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		current_flux = new Flux[size * size];
+		currentFlux = new Flux[size * size];
 		D2 = new float[size * size];
 		waterHeights = new float[size, size];
 		changesInVolume = new float[size * size];
