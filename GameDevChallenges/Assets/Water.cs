@@ -99,8 +99,8 @@ public class Water : MonoBehaviour {
 
 				if(x == size/2) {
 					
-					D1[indexOf (x,z)] = 0.5f;
-					heightValues[x,z] = 0.5f;
+					D1[indexOf (x,z)] = 0.25f;
+					heightValues[x,z] = 0.25f;
 				}
 			}
 		}
