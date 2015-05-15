@@ -390,7 +390,7 @@ public class WaterCubes : MonoBehaviour {
 		}
 
 
-		if (Input.GetKeyUp (KeyCode.Space)) {
+		if (Input.GetKeyUp (KeyCode.Space) || Input.GetKey(KeyCode.LeftCommand)) {
 			//Rainfall ();
 			Outflow ();
 
