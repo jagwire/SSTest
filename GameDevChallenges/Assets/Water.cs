@@ -41,7 +41,11 @@ public class Water : MonoBehaviour {
 	private float[,] waterHeights;
 	private float[] changesInVolume;
 	
-	
+	TerrainData groundTerrainData;
+	GameObject groundTerrain;
+	float[,] heightValues;
+	private float fluxMultiplier;
+
 	//I hardcode the time delta because the simulation will explode -> huge spikes of water everywhere, when relying
 	//on Time.deltaTime. From what I can deduce, the system will get bogged down over time and cause the problem.
 	private float deltaTime = 0.02f; //~ 50 frames per second
@@ -66,18 +70,9 @@ public class Water : MonoBehaviour {
 		float k = (height * 1 * 1) / ((F.l + F.r + F.t + F.b) * deltaTime);
 		return Mathf.Min (1,float.IsNaN(k) ? height/float.Epsilon : k);
 	}
-	
-	
-	void Start() {
-		
-	}
-	
-	TerrainData groundTerrainData;
-	GameObject groundTerrain;
-	float[,] heightValues;
-	private float fluxMultiplier;
+
 	void Awake() {
-		float areaOfPipe = Mathf.PI * Mathf.Pow (1f, 2.0f); //Pi * Radius^2
+		float areaOfPipe = Mathf.PI * Mathf.Pow (radiusOfPipe, 2.0f); //Pi * Radius^2
 		fluxMultiplier = deltaTime * areaOfPipe*accelerationDueToGravity;
 		
 		
