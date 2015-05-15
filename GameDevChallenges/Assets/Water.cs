@@ -73,6 +73,8 @@ public class Water : MonoBehaviour {
 
 	void Awake() {
 		float areaOfPipe = Mathf.PI * Mathf.Pow (radiusOfPipe, 2.0f); //Pi * Radius^2
+
+		//we calculate this once on awake instead of calculating it once every frame...because optimization.
 		fluxMultiplier = deltaTime * areaOfPipe*accelerationDueToGravity;
 
 		D1 = new float[size * size];
