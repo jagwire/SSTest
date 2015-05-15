@@ -122,7 +122,7 @@ public class WaterCubes : MonoBehaviour {
 					terrainCubes[indexOf (x,z)] = t_cube;
 
 					float t_height = Mathf.Abs(x - size/2) + Mathf.Abs(z - size/2);// Random.value * 3f;
-					t_height = Random.value * 3f;
+//					t_height = Random.value * 3f;
 
 					t_cube.transform.position = new Vector3(x,t_height/2.0f,z);
 					t_cube.transform.localScale = new Vector3(1, t_height, 1);
