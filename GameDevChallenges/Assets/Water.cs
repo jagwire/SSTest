@@ -102,6 +102,7 @@ public class Water : MonoBehaviour {
 		groundTerrainData.SetHeights(0,0,heightValues);
 		groundTerrain = Terrain.CreateTerrainGameObject(groundTerrainData);
 		groundTerrain.name = "Ground Terrain";
+		groundTerrain.transform.parent = this.transform;
 		groundTerrain.GetComponent<Terrain>().terrainData = groundTerrainData;
 		groundTerrain.GetComponent<TerrainCollider>().terrainData = groundTerrainData;
 		groundTerrain.GetComponent<Terrain>().Flush();
