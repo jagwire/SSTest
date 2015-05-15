@@ -146,16 +146,12 @@ public class Water : MonoBehaviour {
 				}
 				if (z >= 1) {
 					//bottom neighbor eligible
-					int _x = x;
-					int _z = z - 1;
-					bottom_height = totalHeightAt (_x, _z);
+					bottom_height = totalHeightAt (x, z-1);
 					next.b = flux (current.b, height - bottom_height);
 				}
 				if (z <= size - 2) {
 					//top neighbor eligible
-					int _x = x;
-					int _z = z + 1;
-					top_height = totalHeightAt (_x, _z);
+					top_height = totalHeightAt (x, z+1);
 					next.t = flux (current.t, height - top_height);
 				}
 				
