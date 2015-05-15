@@ -81,6 +81,7 @@ public class Water : MonoBehaviour {
 		
 		waterSurface = Terrain.CreateTerrainGameObject (td);
 		waterSurface.name = "Water Surface";
+		waterSurface.transform.parent = this.transform;
 		waterSurface.isStatic = false;
 		waterSurface.GetComponent<Terrain> ().materialType = Terrain.MaterialType.Custom;
 		waterSurface.GetComponent<Terrain> ().materialTemplate = waterMaterial;
