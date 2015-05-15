@@ -340,7 +340,7 @@ public class WaterCubes : MonoBehaviour {
 
 		}
 
-			//Rainfall ();
+			Rainfall ();
 			Outflow ();
 
 			calculateChangeInVolumes ();
