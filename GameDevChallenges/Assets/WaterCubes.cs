@@ -361,19 +361,13 @@ public class WaterCubes : MonoBehaviour {
 			//Debug.Log ("BOOM!");
 			Vector3 pos = new Vector3();
 
-
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;
 			if(Physics.Raycast(ray, out hitInfo)) {
 				pos = hitInfo.point;
 			}
 
-
 			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 1.0f;
-//			D1[indexOf (Mathf.RoundToInt(pos.x+1), Mathf.RoundToInt(pos.z))] += 0.5f;
-//			D1[indexOf (Mathf.RoundToInt(pos.x+1), Mathf.RoundToInt(pos.z+1))] += 0.5f;
-//			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z+1))] += 0.5f;
-
 
 		}
 		if(Input.GetMouseButtonUp(5)) { //right click and hold
@@ -384,22 +378,18 @@ public class WaterCubes : MonoBehaviour {
 				pos = hitInfo.point;
 			}
 
-
-
 			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] -= 1.0f;
-//			D1[indexOf (Mathf.RoundToInt(pos.x+1), Mathf.RoundToInt(pos.z))] -= 0.5f;
-//			D1[indexOf (Mathf.RoundToInt(pos.x+1), Mathf.RoundToInt(pos.z+1))] -= 0.5f;
-//			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z+1))] -= 0.5f;
+
 		}
 
 
-		if (Input.GetKeyUp (KeyCode.Space) || Input.GetKey(KeyCode.LeftCommand)) {
+//		if (Input.GetKeyUp (KeyCode.Space) || Input.GetKey(KeyCode.LeftCommand)) {
 			//Rainfall ();
 			Outflow ();
 
 			calculateChangeInVolumes ();
 
 			repositionGeometry ();
-		}
+//		}
 	}
 }
