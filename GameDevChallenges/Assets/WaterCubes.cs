@@ -56,7 +56,7 @@ public class WaterCubes : MonoBehaviour {
 		return x + z*size;
 	}
 
-	private float height_of(int x, int z) {
+	private float totalHeightAt(int x, int z) {
 		if (useCubes) {
 			return D1[indexOf (x,z)] + terrainCubes[indexOf (x,z)].transform.localScale.y;
 		} else {
@@ -188,7 +188,7 @@ public class WaterCubes : MonoBehaviour {
 				}
 
 				//current height
-				float height = height_of (x,z);
+				float height = totalHeightAt (x,z);
 				Debug.Log ("PROCESSING: "+x+","+z+" height -> "+height);
 				float left_height = 0;
 				float right_height = 0;
@@ -200,7 +200,7 @@ public class WaterCubes : MonoBehaviour {
 					//left neighbor
 					int _x = x - 1;
 					int _z = z;
-					left_height = height_of (_x, _z);
+					left_height = totalHeightAt (_x, _z);
 					next.l = flux (current.l, height - left_height);
 //					Debug.Log ("LEFT OUTFLOW: "+next.l);
 
@@ -209,7 +209,7 @@ public class WaterCubes : MonoBehaviour {
 					//right neighbor eligible
 					int _x = x + 1;
 					int _z = z;
-					right_height = height_of (_x, _z);
+					right_height = totalHeightAt (_x, _z);
 					next.r = flux (current.r, height - right_height);
 //					Debug.Log ("RIGHT OUTFLOW: "+next.r);
 				}
@@ -217,7 +217,7 @@ public class WaterCubes : MonoBehaviour {
 					//bottom neighbor eligible
 					int _x = x;
 					int _z = z - 1;
-					bottom_height = height_of (_x, _z);
+					bottom_height = totalHeightAt (_x, _z);
 					next.b = flux (current.b, height - bottom_height);
 //					Debug.Log ("BOTTOM OUTFLOW: "+next.b);
 				}
@@ -225,7 +225,7 @@ public class WaterCubes : MonoBehaviour {
 					//top neighbor eligible
 					int _x = x;
 					int _z = z + 1;
-					top_height = height_of (_x, _z);
+					top_height = totalHeightAt (_x, _z);
 					next.t = flux (current.t, height - top_height);
 //					Debug.Log ("TOP OUTFLOW: "+next.t);
 				}
