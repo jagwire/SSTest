@@ -180,6 +180,7 @@ public class WaterCubes : MonoBehaviour {
 					current_flux[indexOf (x,z)] = new Flux();
 					continue;
 				}
+
 				//current height
 				float height = totalHeightAt (x,z);
 				float left_height = 0;
@@ -194,7 +195,6 @@ public class WaterCubes : MonoBehaviour {
 					int _z = z;
 					left_height = totalHeightAt (_x, _z);
 					next.l = flux (current.l, height - left_height);
-//					Debug.Log ("LEFT OUTFLOW: "+next.l);
 
 				}
 				if (x <= size - 2) {
@@ -203,7 +203,6 @@ public class WaterCubes : MonoBehaviour {
 					int _z = z;
 					right_height = totalHeightAt (_x, _z);
 					next.r = flux (current.r, height - right_height);
-//					Debug.Log ("RIGHT OUTFLOW: "+next.r);
 				}
 				if (z >= 1) {
 					//bottom neighbor eligible
@@ -211,7 +210,6 @@ public class WaterCubes : MonoBehaviour {
 					int _z = z - 1;
 					bottom_height = totalHeightAt (_x, _z);
 					next.b = flux (current.b, height - bottom_height);
-//					Debug.Log ("BOTTOM OUTFLOW: "+next.b);
 				}
 				if (z <= size - 2) {
 					//top neighbor eligible
@@ -220,7 +218,6 @@ public class WaterCubes : MonoBehaviour {
 					top_height = totalHeightAt (_x, _z);
 					next.t = flux (current.t, height - top_height);
 				}
-
 
 				if(next.l + next.r + next.t + next.b > D1[indexOf (x,z)]) {
 
