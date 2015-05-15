@@ -273,7 +273,7 @@ public class Water : MonoBehaviour {
 			updateTerrain ();
 			
 		}
-		if(Input.GetMouseButtonUp(5)) { //right click
+		if(Input.GetMouseButtonUp(0)) { //right click
 			Vector3 pos = new Vector3();
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hitInfo;
@@ -281,7 +281,7 @@ public class Water : MonoBehaviour {
 				pos = hitInfo.point;
 			}
 			
-			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] -= 1.0f;
+			D1[indexOf (Mathf.RoundToInt(pos.x), Mathf.RoundToInt(pos.z))] += 1.0f;
 			
 		}
 		
