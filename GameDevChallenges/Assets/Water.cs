@@ -225,6 +225,7 @@ public class Water : MonoBehaviour {
 		waterSurface.GetComponent<Terrain> ().Flush ();
 		
 		//this line is VITAL
+		//save the new height values to be used next frame in Rainfall() and Outflow()
 		D1 = D2;
 	}
 	
