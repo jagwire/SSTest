@@ -104,22 +104,14 @@ public class Water : MonoBehaviour {
 		groundTerrain.GetComponent<TerrainCollider>().terrainData = groundTerrainData;
 		groundTerrain.GetComponent<Terrain>().Flush();
 	}
-	
-	public float count = 0;
+
 	void Rainfall ()
 	{
 		int _x = Mathf.RoundToInt (Random.value * (size-1));
 		int _z = Mathf.RoundToInt (Random.value * (size-1));
-		
-		if (useCubes) {
-			Vector3 waterPosition = cubes [indexOf (_x, _z)].transform.position;
-			Vector3 waterScale = cubes [indexOf (_x, _z)].transform.localScale;
-			
-			D1[indexOf (_x,_z)] += 0.2f;
-		} else {
-			D1 [indexOf (_x, _z)] += 0.2f;
-		}
-		count += 1;
+
+		D1 [indexOf (_x, _z)] += 0.2f;
+
 	}
 	
 	void Outflow ()
