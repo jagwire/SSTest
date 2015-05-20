@@ -42,5 +42,43 @@
             }
             ENDCG
         }
+        
+        Pass {
+	        CGPROGRAM
+	            #pragma vertex vert_img
+	            #pragma fragment frag
+	            #pragma target 3.0
+
+	            #include "UnityCG.cginc"
+
+				uniform sampler2D flux;
+				
+				
+				
+				
+	           float4 frag(v2f_img i) : SV_Target {
+	            
+	           	//get left flow to the right
+	           	//get right flow to the left
+	           	//get up flow  down
+	           	//get bottom flow up
+	           	
+	           	//add all those up
+	           	
+	           	 //get up flux
+	           	 //get down flux
+	           	 //get left flux
+	           	 //get right flux
+	           	 //add all these up
+	           	   
+	           	   //subtract first sum from second sum
+	           	   
+	           	   //return this as r value in float4
+	           	  
+	           	    
+	           }
+	            ENDCG
+        }
+        
     }
 }

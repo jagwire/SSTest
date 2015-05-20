@@ -246,3 +246,8 @@ Cmd: compileSnippet
   api=0 type=0 insize=1379 outsize=1443 kw= ok=1
 Cmd: compileSnippet
   api=0 type=1 insize=1379 outsize=6 kw= ok=1
+Cmd: preprocess
+  insize=2130 outsize=288 ok=1
+Cmd: compileSnippet
+  error: 2 plat 0 at (59): '' : function does not return a value: frag\nCompiling Vertex program
+  api=0 type=0 insize=1062 outsize=0 kw= ok=0
