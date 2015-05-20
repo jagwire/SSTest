@@ -28,10 +28,17 @@
             float4 frag(v2f_img i) : SV_Target {
             
             	float2 up = float2(i.uv.x, i.uv.y+1);
-            	float2 down = float(i.uv.x, i.uv.y-1);
+            	float2 down = float2(i.uv.x, i.uv.y-1);
+            	float2 left = float2(i.uv.x-1, i.uv.y);
+            	float2 right = float2(i.uv.x+1, i.uv.y);
+				
+        		float up_flux = flux(i.uv, up);
+        		float down_flux = flux(i.uv, down);
+        		float left_flux = flux(i.uv, left);
+        		float right_flux = flux(i.uv, right);           	
+            	
             
-            
-                return float4(0.0,1.0,0.0,1.0);
+                return float4(up_flux, down_flux, left_flux, right_flux);
             }
             ENDCG
         }
