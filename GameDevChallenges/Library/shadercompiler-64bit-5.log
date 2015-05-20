@@ -3,3 +3,5 @@ Pipe name: \\.\pipe\UnityShaderCompiler-64bit-5-1169895424
 Cmd: getPlatforms
 Cmd: compileSnippet
   api=4 type=0 insize=649 outsize=892 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=550 outsize=100 kw= ok=1
