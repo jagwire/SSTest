@@ -17,9 +17,20 @@
 				return tex2D(terrainHeights, uv);
 			}
 			
+			float water(float2 uv) {
+				return tex2D(waterHeights, uv);
+			}
 			
+			float flux(float2 uv1, float2 uv2) {
+				max(0,x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2));
+			}
 			
             float4 frag(v2f_img i) : SV_Target {
+            
+            	float2 up = float2(i.uv.x, i.uv.y+1);
+            	float2 down = float(i.uv.x, i.uv.y-1);
+            
+            
                 return float4(0.0,1.0,0.0,1.0);
             }
             ENDCG
