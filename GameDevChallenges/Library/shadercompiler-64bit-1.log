@@ -27,3 +27,8 @@ Cmd: compileSnippet
   api=0 type=0 insize=305 outsize=0 kw= ok=1
 Cmd: compileSnippet
   api=0 type=1 insize=305 outsize=6 kw= ok=1
+Cmd: preprocess
+  insize=427 outsize=399 ok=1
+Cmd: compileSnippet
+  error: 2 plat 0 at (18): 'frag' : syntax error syntax error\nCompiling Vertex program
+  api=0 type=0 insize=327 outsize=0 kw= ok=0

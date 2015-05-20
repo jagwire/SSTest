@@ -15,6 +15,9 @@
 			#pragma vertex vert
 			#pragma fragment frag
 			
+			frag() {
+				
+			}
 			
 
 			ENDCG
