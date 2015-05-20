@@ -14,7 +14,7 @@
 		}
 		
 		fixed4 frag() : SV_Target {
-			return fixed4(0.0, 1.0,1.0,1.0);
+			return fixed4(0.0, 1.0,0.0,1.0);
 		}
 		
 		ENDCG
