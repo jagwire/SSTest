@@ -2,35 +2,22 @@
     SubShader {
         Pass {
             CGPROGRAM
+
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 3.0
 
             #include "UnityCG.cginc"
 
-            struct vertOut {
-                float4 pos:SV_POSITION;
-                float4 scrPos;
-            };
-
-            vertOut vert(appdata_base v) {
-                vertOut o;
-                o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
-                o.scrPos = ComputeScreenPos(o.pos);
-                return o;
+            float4 vert(appdata_base v) : POSITION {
+                return mul (UNITY_MATRIX_MVP, v.vertex);
             }
 
-            fixed4 frag(vertOut i) : SV_Target {
-                float2 wcoord = (i.scrPos.xy/i.scrPos.w);
-                fixed4 color;
-
-                if (fmod(20.0*wcoord.x,2.0)<1.0) {
-                    color = fixed4(wcoord.xy,0.0,1.0);
-                } else {
-                    color = fixed4(0.3,0.3,0.3,1.0);
-                }
-                return color;
+            fixed4 frag(float4 sp:WPOS) : SV_Target {
+                float2 wcoord = sp.xy/_ScreenParams.xy;
+                float vig = clamp(3.0*length(wcoord-0.5),0.0,1.0);
+                return lerp (fixed4(wcoord,0.0,1.0),fixed4(0.3,0.3,0.3,1.0),vig);
             }
-
             ENDCG
         }
     }
