@@ -57,7 +57,7 @@
 				
 				
 	           float4 frag(v2f_img i) : SV_Target {
-	            
+	            	return float4(0.0, 0.0, 0.0, 0.0);
 	           	//get left flow to the right
 	           	//get right flow to the left
 	           	//get up flow  down
