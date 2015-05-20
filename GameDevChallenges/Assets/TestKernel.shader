@@ -5,13 +5,16 @@
 
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 3.0
 
-            float4 vert(float4 v:POSITION) : SV_POSITION {
-                return mul (UNITY_MATRIX_MVP, v);
+            #include "UnityCG.cginc"
+
+            float4 vert(appdata_base v) : POSITION {
+                return mul (UNITY_MATRIX_MVP, v.vertex);
             }
 
-            fixed4 frag() : SV_Target {
-                return fixed4(1.0,0.0,0.0,1.0);
+            fixed4 frag(float4 sp:WPOS) : SV_Target {
+                return fixed4(sp.xy/_ScreenParams.xy,0.0,1.0);
             }
 
             ENDCG
