@@ -14,7 +14,7 @@
 			uniform float x;
 			
 			float terrain(float2 uv) {
-				tex2D(terrainHeights, uv);
+				return tex2D(terrainHeights, uv);
 			}
 			
 			
