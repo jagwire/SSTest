@@ -18,7 +18,6 @@
 		fixed4 frag(float4 sp:WPOS) : SV_Target {
 		
 			return fixed4(sp.xy/_ScreenParams.xy,0.0,1.0);
-//			return fixed4(0.0, 1.0,0.0,1.0);
 		}
 		
 		ENDCG
