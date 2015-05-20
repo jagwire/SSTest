@@ -15,7 +15,7 @@
 			#pragma vertex vert
 			#pragma fragment frag
 			
-			frag() {
+			fixed2 frag() {
 				
 			}
 			
