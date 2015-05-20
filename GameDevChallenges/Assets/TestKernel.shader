@@ -45,7 +45,13 @@
             	//if up_flux + down_flux + left_flux + right_flux > water(i.uv)
             	
             	// calculate k
-            
+            	float m = k(float4(up_flux, down_flux, left_flux, right_flux), water(i.uv));
+            	
+            	up_flux *= m;
+            	down_flux *= m;
+            	left_flux *= m;
+            	right_flux *= m;
+            	
                 return float4(up_flux, down_flux, left_flux, right_flux);
             }
             ENDCG

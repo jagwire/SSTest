@@ -251,3 +251,8 @@ Cmd: preprocess
 Cmd: compileSnippet
   error: 2 plat 0 at (59): '' : function does not return a value: frag\nCompiling Vertex program
   api=0 type=0 insize=1062 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=2662 outsize=288 ok=1
+Cmd: compileSnippet
+  error: 2 plat 0 at (30): 'timeDelta' : undeclared identifier\nCompiling Vertex program
+  api=0 type=0 insize=1876 outsize=0 kw= ok=0
