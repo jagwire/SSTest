@@ -8,6 +8,8 @@
 
             #include "UnityCG.cginc"
 
+			uniform sampler2D _MainTex;
+
             float4 frag(v2f_img i) : SV_Target {
                 return float4(1.0,0.0,0.0,1.0);
             }
