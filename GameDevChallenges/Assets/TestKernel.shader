@@ -22,7 +22,7 @@
 			}
 			
 			float flux(float2 uv1, float2 uv2) {
-				Max(0,x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2));
+				max(0,x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2)));
 			}
 			
             float4 frag(v2f_img i) : SV_Target {
