@@ -261,3 +261,13 @@ Cmd: preprocess
 Cmd: compileSnippet
   error: 2 plat 0 at (30): 'timeDelta' : undeclared identifier\nCompiling Vertex program
   api=0 type=0 insize=1877 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=2663 outsize=288 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1877 outsize=1887 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1877 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1097 outsize=263 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1097 outsize=6 kw= ok=1

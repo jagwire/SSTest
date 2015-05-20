@@ -27,7 +27,7 @@
 			}
 			
 			float k(float4 f, float waterHeight) {
-				return min(1, waterHeight / ((f.x + f.y + f.z + f.w)*timeDelta));
+				return min(1, waterHeight / ((f.x + f.y + f.z + f.w)*deltaTime));
 			}
 			
             float4 frag(v2f_img i) : SV_Target {
