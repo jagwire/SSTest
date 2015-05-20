@@ -12,6 +12,7 @@
 			uniform sampler2D waterHeights;
 			uniform sampler2D terrainHeights;
 			uniform float x;
+			uniform float deltaTime;
 			
 			float terrain(float2 uv) {
 				return tex2D(terrainHeights, uv);
@@ -22,7 +23,11 @@
 			}
 			
 			float flux(float2 uv1, float2 uv2) {
-				return max(0,x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2)));
+				return max(0,deltaTime*x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2)));
+			}
+			
+			float k(float4 f, float waterHeight) {
+				return min(1, waterHeight/ ((f.x + f.y + f.z + f.w)*timeDelta));
 			}
 			
             float4 frag(v2f_img i) : SV_Target {
@@ -37,6 +42,9 @@
         		float left_flux = flux(i.uv, left);
         		float right_flux = flux(i.uv, right);           	
             	
+            	//if up_flux + down_flux + left_flux + right_flux > water(i.uv)
+            	
+            	// calculate k
             
                 return float4(up_flux, down_flux, left_flux, right_flux);
             }
