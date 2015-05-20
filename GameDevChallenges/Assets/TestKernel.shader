@@ -11,6 +11,13 @@
 			uniform sampler2D _MainTex;
 			uniform sampler2D waterHeights;
 			uniform sampler2D terrainHeights;
+			uniform float x;
+			
+			float terrain(float2 uv) {
+				tex2d(terrainHeights, uv);
+			}
+			
+			
 			
             float4 frag(v2f_img i) : SV_Target {
                 return float4(0.0,1.0,0.0,1.0);
