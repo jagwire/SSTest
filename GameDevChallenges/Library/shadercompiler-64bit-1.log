@@ -39,3 +39,7 @@ Cmd: compileSnippet
   api=0 type=0 insize=334 outsize=0 kw= ok=0
 Cmd: preprocess
   insize=434 outsize=1476 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=3319 outsize=1394 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=3319 outsize=6 kw=DIRECTIONAL ok=1
