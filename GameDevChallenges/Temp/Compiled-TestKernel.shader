@@ -1,11 +1,8 @@
-// Compiled shader for Web Player, uncompressed size: 2.7KB
+// Compiled shader for Web Player, uncompressed size: 2.6KB
 
 // Skipping shader variants that would not be included into build of current scene.
 
 Shader "Custom/TestKernel" {
-Properties {
- _MainTex ("Base (RGB)", 2D) = "white" { }
-}
 SubShader { 
 
 
@@ -16,7 +13,7 @@ SubShader {
  // Stats for Fragment shader:
  //       d3d11 : 1 math
  Pass {
-  GpuProgramID 36157
+  GpuProgramID 53976
 Program "vp" {
 SubProgram "opengl " {
 // Stats: 2 math
@@ -107,5 +104,4 @@ aaaaaaaaaaaaiadpdoaaaaab"
 }
  }
 }
-Fallback "Diffuse"
 }
