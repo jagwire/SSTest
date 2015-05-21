@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{A81334B2-E3DB-40FA-E428-9D8AF0EF1D50}") = "GameDevChallenges", "Assembly-CSharp-firstpass.csproj", "{1462BEEB-BDF0-860F-FC4F-926A7372D86A}"
 EndProject
 Project("{A81334B2-E3DB-40FA-E428-9D8AF0EF1D50}") = "GameDevChallenges", "Assembly-CSharp.csproj", "{D7A87CF1-651A-B650-3DCC-7A5EB0FC3302}"
