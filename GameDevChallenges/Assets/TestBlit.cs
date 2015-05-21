@@ -10,5 +10,6 @@ public class TestBlit : MonoBehaviour {
 		RenderTexture rt = new RenderTexture (size, size, 16, RenderTextureFormat.ARGBFloat);
 
 		Graphics.Blit (t, rt, kernel, -1);
+	
 	}
 }
