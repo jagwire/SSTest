@@ -38,7 +38,7 @@
         		float left_flux = flux(i.uv, left);
         		float right_flux = flux(i.uv, right);           	
             	
-            	if(up_flux + down_flux + left_flux + right_flux > water(i.uv)) {}
+            	if(up_flux + down_flux + left_flux + right_flux > water(i.uv)) {
             	
             	// calculate k
             	float m = k(float4(up_flux, down_flux, left_flux, right_flux), water(i.uv));

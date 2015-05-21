@@ -56,3 +56,9 @@ Cmd: compileSnippet
   error: 2 plat 0 at (30): '' : function does not return a value: frag\nCompiling Vertex program
   error: 2 plat 0 at (51): 'return' : syntax error syntax error\nCompiling Vertex program
   api=0 type=0 insize=1741 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=1577 outsize=134 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1740 outsize=2348 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1740 outsize=6 kw= ok=1
