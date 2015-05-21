@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class TestBlit : MonoBehaviour {
-		
-
 	public Material kernel;
 	public int size;
 	// Update is called once per frame
