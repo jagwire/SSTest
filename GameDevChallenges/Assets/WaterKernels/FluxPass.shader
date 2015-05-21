@@ -15,6 +15,10 @@
 				return tex2D(terrainHeights, uv);
 			}
 				
+			float water(float2 uv) {
+				return tex2D(waterHeights, uv);
+			}	
+				
 			ENDCG
 		}
 	}
