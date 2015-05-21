@@ -22,3 +22,8 @@ Cmd: compileSnippet
   api=0 type=0 insize=461 outsize=0 kw= ok=1
 Cmd: compileSnippet
   api=0 type=1 insize=461 outsize=6 kw= ok=1
+Cmd: preprocess
+  insize=302 outsize=134 ok=1
+Cmd: compileSnippet
+  error: 2 plat 0 at (12): 'asdf' : syntax error syntax error\nCompiling Vertex program
+  api=0 type=0 insize=465 outsize=0 kw= ok=0
