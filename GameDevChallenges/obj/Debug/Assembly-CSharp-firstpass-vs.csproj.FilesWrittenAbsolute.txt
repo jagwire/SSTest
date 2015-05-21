@@ -1,0 +1,12 @@
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/UnityEngine.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/UnityEditor.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/Mono.Cecil.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/Unity.DataContract.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/babiuchr/SparkleShare/SSTest/GameDevChallenges/Temp/bin/Debug/Unity.CecilTools.dll
