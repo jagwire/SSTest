@@ -7,3 +7,6 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   error: 2 plat 1 at (16): invalid ps_3_0 input semantic 'WPOS'\nCompiling Fragment program
   api=1 type=1 insize=649 outsize=0 kw= ok=0
+End of pipe
+
+Quitting shader compiler process
