@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Editor\VSCodeUnity\CopyDirectory.cs" />
+     <Compile Include="Assets\Editor\VSCodeUnity\VSCodeUnity.cs" />
      <None Include="Assets\WaterKernels\HeightPass.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\WaterKernels\FluxPass.shader" />
