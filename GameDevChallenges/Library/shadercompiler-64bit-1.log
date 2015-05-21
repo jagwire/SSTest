@@ -4,3 +4,5 @@ Cmd: getPlatforms
 Cmd: preprocess
   error: 2 plat 15 at (21): Syntax error
   insize=436 outsize=298 ok=0
+Cmd: preprocess
+  insize=51 outsize=48 ok=1
