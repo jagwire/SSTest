@@ -19,6 +19,10 @@
 				return tex2D(waterHeights, uv);
 			}	
 			
+			float flux(float2 uv1, float2 uv2) {
+				
+			
+			}
 			
 			ENDCG
 		}
