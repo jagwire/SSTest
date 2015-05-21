@@ -23,6 +23,10 @@
 				return max(0, deltaTime*x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2)));		
 			}
 			
+			float k(float4 f, float waterHeight) {
+				return min(1,waterHeight/((f.x+f.y+f.z+f.w)*deltaTime));
+			}
+			
 			ENDCG
 		}
 	}
