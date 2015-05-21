@@ -27,3 +27,8 @@ Cmd: preprocess
 Cmd: compileSnippet
   error: 2 plat 0 at (12): 'asdf' : syntax error syntax error\nCompiling Vertex program
   api=0 type=0 insize=465 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=372 outsize=134 ok=1
+Cmd: compileSnippet
+  error: 2 plat 0 at (15): 'text2D' : no matching overloaded function found\nCompiling Vertex program
+  api=0 type=0 insize=535 outsize=0 kw= ok=0
