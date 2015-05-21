@@ -12,7 +12,7 @@
 			uniform float deltaTime;
 				
 			float terrain(float2 uv) {
-				return text2D(terrainHeights, uv);
+				return tex2D(terrainHeights, uv);
 			}
 				
 			ENDCG
