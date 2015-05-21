@@ -9,7 +9,7 @@
 			uniform sampler2D waterHeights;
 			uniform sampler2D terrainHeights;
 			uniform float x;
-			uniform float deltaTime;asdf
+			uniform float deltaTime;
 				
 				
 			ENDCG
