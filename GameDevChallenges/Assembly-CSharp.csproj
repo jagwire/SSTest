@@ -55,6 +55,7 @@
      <Compile Include="Assets\Water.cs" />
      <Compile Include="Assets\WaterCubes.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\WaterKernels\FluxPass.shader" />
      <None Include="Assets\TestKernel.shader" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\NewShader.shader" />
