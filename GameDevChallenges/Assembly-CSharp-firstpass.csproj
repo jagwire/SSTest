@@ -69,6 +69,7 @@
      <None Include="Assets\WaterKernels\FluxPass.shader" />
      <None Include="Assets\TestKernel.shader" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+     <None Include="Assets\WaterKernels\VolumePass.shader" />
      <None Include="Assets\NewShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
