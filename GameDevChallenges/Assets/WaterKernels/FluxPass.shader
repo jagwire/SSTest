@@ -20,8 +20,7 @@
 			}	
 			
 			float flux(float2 uv1, float2 uv2) {
-					return max(0, deltaTime*x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2)));	
-			
+				return max(0, deltaTime*x*(terrain(uv1)+water(uv1)-terrain(uv2)-water(uv2)));		
 			}
 			
 			ENDCG
