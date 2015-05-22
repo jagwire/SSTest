@@ -9,6 +9,14 @@ public class TestBlit : MonoBehaviour {
 	
 	private Texture2D waterHeightsTexture;
 	private Texture2D terrainHeightsTexture;
+	
+	void Awake() {
+		waterHeightsTexture = new Texture2D(size, size);
+		terrainHeightsTexture = new Texture2D(size, size);
+			
+	}
+	
+	
 	void Update () {
 		Texture2D t = new Texture2D (size, size);
 		RenderTexture rt = newTexture();
