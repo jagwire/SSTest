@@ -12,7 +12,7 @@ public class TestBlit : MonoBehaviour {
 
 		kernel.SetTexture("waterHeights", waterHeightsTexture);
 		kernel.SetTexture("terrainHeights", terrainHeightsTexture);
-		
+
 		Graphics.Blit (t, rt, kernel, -1);
 	
 	}
