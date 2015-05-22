@@ -54,7 +54,7 @@
      <Compile Include="Assets\Test\TestBlit.cs" />
      <Compile Include="Assets\Water.cs" />
      <Compile Include="Assets\WaterCubes.cs" />
-     <None Include="Assets\TestKernel.shader" />
+     <None Include="Assets\Test\TestKernel.shader" />
      <None Include="Assets\WaterKernels\HeightPass.shader" />
      <None Include="Assets\GLSL Shaders\PassThru.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
