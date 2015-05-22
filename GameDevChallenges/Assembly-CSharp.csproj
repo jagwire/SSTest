@@ -55,7 +55,6 @@
      <Compile Include="Assets\TestBlit.cs" />
      <Compile Include="Assets\Water.cs" />
      <Compile Include="Assets\WaterCubes.cs" />
-     <None Include="Assets\MyTestComputeShader.compute" />
      <None Include="Assets\WaterKernels\HeightPass.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\WaterKernels\FluxPass.shader" />
