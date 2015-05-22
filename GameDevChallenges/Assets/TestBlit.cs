@@ -19,6 +19,6 @@ public class TestBlit : MonoBehaviour {
 	}
 	
 	RenderTexture newTexture() {
-		return RenderTexture.GetTemporary(size, size,24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Default);
+		return RenderTexture.GetTemporary(size, size,24, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Default);
 	}
 }
