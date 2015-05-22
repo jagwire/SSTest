@@ -1,4 +1,7 @@
 ﻿Shader "Custom/PassThru" {
+	Properties {
+		_MainTex("Base (RGB)", 2D) = "white" {}
+	}
 	SubShader {
 		Pass {
 			GLSLPROGRAM
