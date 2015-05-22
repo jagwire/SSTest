@@ -1,4 +1,4 @@
-// Compiled shader for Web Player, uncompressed size: 0.9KB
+// Compiled shader for Current graphics device, uncompressed size: 0.9KB
 
 // Skipping shader variants that would not be included into build of current scene.
 
