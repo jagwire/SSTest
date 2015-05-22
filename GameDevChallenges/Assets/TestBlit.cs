@@ -7,11 +7,6 @@ public class TestBlit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Texture2D t = new Texture2D (size, size);
-		
-		RenderTexture _rt = 
-		
-		
-		
 		RenderTexture rt = newTexture();
 
 		Graphics.Blit (t, rt, kernel, -1);
