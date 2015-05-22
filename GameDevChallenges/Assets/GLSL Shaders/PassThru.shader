@@ -22,7 +22,12 @@
 			
 			void main()
 			{
-				gl_FragColor = vec4(0.0,0.0,0.0,1.0);
+				vec4 c;
+				c.xyz = 1.0;
+				c.w = 1.0;
+				
+				
+				gl_FragColor = c;
 			}
 			
 			#endif
