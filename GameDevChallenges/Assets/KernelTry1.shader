@@ -1,4 +1,4 @@
-﻿Shader "Custom/TestKernel" {
+﻿Shader "Custom/KernelTry1" {
     SubShader {
         Pass {
             CGPROGRAM
