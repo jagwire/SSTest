@@ -1,11 +1,16 @@
-// Compiled shader for Web Player, uncompressed size: 0.8KB
+// Compiled shader for Web Player, uncompressed size: 0.9KB
 
 // Skipping shader variants that would not be included into build of current scene.
 
 Shader "Custom/PassThru" {
+Properties {
+ _MainTex ("Base (RGB)", 2D) = "white" { }
+}
 SubShader { 
+ Tags { "QUEUE"="Geometry" }
  Pass {
-  GpuProgramID 58950
+  Tags { "QUEUE"="Geometry" }
+  GpuProgramID 23043
 Program "vp" {
 SubProgram "opengl " {
 "!!GLSL
@@ -21,29 +26,40 @@ SubProgram "opengl " {
 #define highp
 #define mediump
 #define lowp
-#line 2
+#line 6
 #ifdef DUMMY_PREPROCESSOR_TO_WORK_AROUND_HLSL_COMPILER_LINE_HANDLING
 #endif
 
-#line 2
+#line 6
 #ifdef DUMMY_PREPROCESSOR_TO_WORK_AROUND_HLSL_COMPILER_LINE_HANDLING
 #endif
 
+			
 			#ifdef VERTEX
+			
 			attribute vec4 vPosition
 			
-			void main() {
+			void main()
+			{
 				gl_Position = vPosition;
 			}
 			#endif
 			
 			#ifdef FRAGMENT
-			precision mediump float;
+			//precision mediump float;
 			
-			void main() {
-				//gl_FragColor = vec4(0.0,0.0,1.0,1.0);
+			void main()
+			{
+				vec4 c;
+				c.xyz = 1.0;
+				c.w = 1.0;
+				
+				
+				gl_FragColor = c;
 			}
+			
 			#endif
+			
 			
 "
 }
