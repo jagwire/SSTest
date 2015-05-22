@@ -9,6 +9,10 @@ public class TestBlit : MonoBehaviour {
 		Texture2D t = new Texture2D (size, size);
 		RenderTexture rt = newTexture();
 
+
+		kernel.SetTexture("waterHeights", waterHeightsTexture);
+		kernel.SetTexture("terrainHeights", terrainHeightsTexture);
+		
 		Graphics.Blit (t, rt, kernel, -1);
 	
 	}
