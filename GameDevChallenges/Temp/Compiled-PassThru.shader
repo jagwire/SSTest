@@ -10,7 +10,7 @@ SubShader {
  Tags { "QUEUE"="Geometry" }
  Pass {
   Tags { "QUEUE"="Geometry" }
-  GpuProgramID 23043
+  GpuProgramID 52348
 Program "vp" {
 SubProgram "opengl " {
 "!!GLSL
@@ -37,7 +37,7 @@ SubProgram "opengl " {
 			
 			#ifdef VERTEX
 			
-			attribute vec4 vPosition
+			attribute vec4 vPosition;
 			
 			void main()
 			{
@@ -46,16 +46,10 @@ SubProgram "opengl " {
 			#endif
 			
 			#ifdef FRAGMENT
-			//precision mediump float;
 			
 			void main()
 			{
-				vec4 c;
-				c.xyz = 1.0;
-				c.w = 1.0;
-				
-				
-				gl_FragColor = c;
+				gl_FragColor = vec3(1.0,1.0,1.0);
 			}
 			
 			#endif
