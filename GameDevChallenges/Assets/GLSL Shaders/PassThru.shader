@@ -21,7 +21,7 @@
 			
 			void main()
 			{
-				vec4 c;
+				vec3 c;
 				c.x = 1.0;
 				c.y = 1.0;
 				c.z = 1.0;
