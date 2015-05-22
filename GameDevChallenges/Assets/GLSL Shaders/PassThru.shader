@@ -6,10 +6,8 @@
 		Tags { "Queue" = "Geometry"}
 		Pass {
 			GLSLPROGRAM
-			
-			#ifdef VERTEX
-			
 			varying vec4 position;
+			#ifdef VERTEX
 			
 			void main()
 			{
@@ -19,8 +17,6 @@
 			#endif
 			
 			#ifdef FRAGMENT
-			varying vec4 position;
-			
 			void main()
 			{
 				gl_FragColor = position;
