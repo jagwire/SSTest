@@ -25,7 +25,6 @@
 				c.x = 1.0;
 				c.y = 1.0;
 				c.z = 1.0;
-				c.w = 1.0;
 				
 				
 				gl_FragColor = c;
