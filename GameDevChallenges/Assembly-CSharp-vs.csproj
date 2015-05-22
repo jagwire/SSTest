@@ -51,7 +51,7 @@
      <Compile Include="Assets\MouseOverBehavior.cs" />
      <Compile Include="Assets\MoveUpAndDown.cs" />
      <Compile Include="Assets\TerrainMouseOver.cs" />
-     <Compile Include="Assets\TestBlit.cs" />
+     <Compile Include="Assets\Test\TestBlit.cs" />
      <Compile Include="Assets\Water.cs" />
      <Compile Include="Assets\WaterCubes.cs" />
      <None Include="Assets\TestKernel.shader" />
