@@ -11,7 +11,7 @@
 			
 			void main()
 			{
-				//gl_Position = vPosition;
+				gl_Position = vPosition;
 			}
 			#endif
 			
