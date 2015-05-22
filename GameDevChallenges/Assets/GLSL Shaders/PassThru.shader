@@ -18,7 +18,7 @@
 			#endif
 			
 			#ifdef FRAGMENT
-			//precision mediump float;
+			precision mediump float;
 			
 			void main()
 			{
