@@ -16,8 +16,8 @@ public class TestBlit : MonoBehaviour {
 		
 		for(int x = 0; x < size; x++) {
 			for(int z = 0; z < size; z++) {
-				waterHeightsTexture.SetPixel(x, z, Color.green);
-				terrainHeightsTexture.SetPixel(x, z, Color.green);
+				waterHeightsTexture.SetPixel(x, z, Color.black);
+				terrainHeightsTexture.SetPixel(x, z, Color.black);
 			}
 		}	
 	}
