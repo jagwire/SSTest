@@ -4,9 +4,6 @@ using System.Collections;
 public class TestBlit : MonoBehaviour {
 	public Material kernel;
 	public int size;
-
-
-	
 	private Texture2D waterHeightsTexture;
 	private Texture2D terrainHeightsTexture;
 	
@@ -22,7 +19,6 @@ public class TestBlit : MonoBehaviour {
 		}	
 	}
 	
-	
 	void Update () {
 		Texture2D t = new Texture2D (size, size);
 		RenderTexture rt = newTexture();
@@ -33,10 +29,7 @@ public class TestBlit : MonoBehaviour {
 		Graphics.Blit (t, rt, kernel, -1);
 	
 	}
-	
-	
-	
-	
+
 	RenderTexture newTexture() {
 		return RenderTexture.GetTemporary(size, size,24, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Default);
 	}
