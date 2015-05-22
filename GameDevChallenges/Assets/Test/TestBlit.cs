@@ -22,12 +22,12 @@ public class TestBlit : MonoBehaviour {
 	void Update () {
 		Texture2D t = new Texture2D (size, size);
 		RenderTexture rt = newTexture();
-
+		RenderTexture.active = rt;
 		kernel.SetTexture("waterHeights", waterHeightsTexture);
 		kernel.SetTexture("terrainHeights", terrainHeightsTexture);
 		kernel.SetFloat("x", 0.02f);
 		Graphics.Blit (t, rt, kernel, -1);
-	
+		
 	}
 
 	RenderTexture newTexture() {
