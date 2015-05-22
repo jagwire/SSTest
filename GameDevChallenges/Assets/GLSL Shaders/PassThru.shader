@@ -3,7 +3,7 @@
 		Pass {
 			GLSLPROGRAM
 			#ifdef VERTEX
-			attribute vec4 position
+			attribute vec4 vPosition
 			
 			void main() {
 				gl_Position = vPosition;
