@@ -9,8 +9,11 @@
 			
 			#ifdef VERTEX
 			
+			varying vec4 position;
+			
 			void main()
 			{
+				position = gl_Vertex + vec4(0.5, 0.5, 0.5, 0.0);
 				gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
 			}
 			#endif
