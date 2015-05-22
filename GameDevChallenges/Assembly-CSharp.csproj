@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ComputeShaderTest.cs" />
      <Compile Include="Assets\GenerateCubes.cs" />
      <Compile Include="Assets\IHeights.cs" />
      <Compile Include="Assets\MouseOverBehavior.cs" />
