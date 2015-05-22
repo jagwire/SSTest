@@ -11,7 +11,7 @@
 			
 			void main()
 			{
-				position = gl_Vertex + vec4(0.0, 0.5, 0.5, 0.0);
+				position = gl_Vertex + vec4(0.5, 0.5, 0.5, 0.0);
 				gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
 			}
 			#endif

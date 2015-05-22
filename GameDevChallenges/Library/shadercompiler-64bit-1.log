@@ -202,3 +202,5 @@ Cmd: preprocess
   insize=469 outsize=210 ok=1
 Cmd: compileSnippet
   api=0 type=0 insize=464 outsize=704 kw= ok=1
+Cmd: preprocess
+  insize=469 outsize=210 ok=1
