@@ -53,7 +53,7 @@
      <None Include="Assets\GLSL Shaders\PassThru.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\WaterKernels\FluxPass.shader" />
-     <None Include="Assets\TestKernel.shader" />
+     <None Include="Assets\KernelTry1.shader" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\WaterKernels\VolumePass.shader" />
  <Reference Include="UnityEngine.UI">
