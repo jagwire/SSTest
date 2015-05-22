@@ -3,7 +3,11 @@
 		Pass {
 			GLSLPROGRAM
 			#ifdef VERTEX
+			attribute vec4 position
 			
+			void main() {
+				gl_Position = vPosition;
+			}
 			#endif
 			
 			#ifdef FRAGMENT
