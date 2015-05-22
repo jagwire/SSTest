@@ -49,6 +49,7 @@
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
      <Compile Include="Assets\Editor\VSCodeUnity\CopyDirectory.cs" />
      <Compile Include="Assets\Editor\VSCodeUnity\VSCodeUnity.cs" />
+     <None Include="Assets\TestKernel.shader" />
      <None Include="Assets\WaterKernels\HeightPass.shader" />
      <None Include="Assets\GLSL Shaders\PassThru.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
