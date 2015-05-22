@@ -4,7 +4,11 @@ using System.Collections;
 public class TestBlit : MonoBehaviour {
 	public Material kernel;
 	public int size;
-	// Update is called once per frame
+
+
+	
+	private Texture2D waterHeightsTexture;
+	private Texture2D terrainHeightsTexture;
 	void Update () {
 		Texture2D t = new Texture2D (size, size);
 		RenderTexture rt = newTexture();
