@@ -9,11 +9,9 @@
 			
 			#ifdef VERTEX
 			
-			attribute vec4 vPosition;
-			
 			void main()
 			{
-				gl_Position = vPosition;
+				gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
 			}
 			#endif
 			
