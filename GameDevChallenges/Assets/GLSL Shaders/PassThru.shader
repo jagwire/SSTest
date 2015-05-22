@@ -1,9 +1,5 @@
 ﻿Shader "Custom/PassThru" {
-	Properties {
-		_MainTex("Base (RGB)", 2D) = "white" {}
-	}
 	SubShader {
-		Tags { "Queue" = "Geometry"}
 		Pass {
 			GLSLPROGRAM
 			varying vec4 position;
