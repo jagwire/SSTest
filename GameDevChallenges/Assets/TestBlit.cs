@@ -13,7 +13,13 @@ public class TestBlit : MonoBehaviour {
 	void Awake() {
 		waterHeightsTexture = new Texture2D(size, size);
 		terrainHeightsTexture = new Texture2D(size, size);
-			
+		
+		for(int x = 0; x < size; x++) {
+			for(int z = 0; z < size; z++) {
+				waterHeightsTexture.SetPixel(x, z, Color.green);
+				terrainHeightsTexture.SetPixel(x, z, Color.green);
+			}
+		}	
 	}
 	
 	
