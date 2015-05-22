@@ -22,7 +22,8 @@
 			void main()
 			{
 				vec4 c;
-				c.xyz = 1.0;
+				c.x = 1.0;
+				
 				c.w = 1.0;
 				
 				
