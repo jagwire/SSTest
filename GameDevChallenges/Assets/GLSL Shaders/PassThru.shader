@@ -20,5 +20,4 @@
 			ENDGLSL	
 		}
 	} 
-	FallBack "Diffuse"
 }
