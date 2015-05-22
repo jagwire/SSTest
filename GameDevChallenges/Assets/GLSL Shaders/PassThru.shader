@@ -9,7 +9,7 @@
 			
 			#ifdef VERTEX
 			
-			attribute vec4 vPosition
+			attribute vec4 vPosition;
 			
 			void main()
 			{
