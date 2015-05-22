@@ -21,13 +21,7 @@
 			
 			void main()
 			{
-				vec3 c;
-				c.x = 1.0;
-				c.y = 1.0;
-				c.z = 1.0;
-				
-				
-				gl_FragColor = c;
+				gl_FragColor = vec3(1.0,1.0,1.0);
 			}
 			
 			#endif
