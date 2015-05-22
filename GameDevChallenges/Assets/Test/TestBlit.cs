@@ -27,7 +27,7 @@ public class TestBlit : MonoBehaviour {
 		kernel.SetTexture("terrainHeights", terrainHeightsTexture);
 		kernel.SetFloat("x", 0.02f);
 		Graphics.Blit (t, rt, kernel, -1);
-		
+		RenderTexture.active = null;
 	}
 
 	RenderTexture newTexture() {
