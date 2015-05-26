@@ -68,7 +68,7 @@ public class WaterWakes : MonoBehaviour
 		
 		return newArray;
 	}
-	
+	// READY FOR UPDATE, MOVE WATER, ETC...
 
 
 
