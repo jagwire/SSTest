@@ -42,6 +42,14 @@ public class WaterWakes : MonoBehaviour
         //part 2
         storedKernelArray = new float[P * 2 + 1, P * 2 + 1];
         PrecomputeKernelValues();
+		
+		//part 2.2
+		height = height_tmp.ToArray();
+		previousHeight = CloneList(height);
+		verticalDerivative = CloneList(height);
+		source = CloneList(height);
+		obstruction = CloneList(height);
+		heightDifference = CloneList(height);
     }
 
 	// Update is called once per frame
