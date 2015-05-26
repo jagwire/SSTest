@@ -52,6 +52,7 @@ public class WaterWakes : MonoBehaviour
 		heightDifference = CloneList(height);
     
 		unfolded_verts = new Vector3[height.Length*height.Length];
+		arrayLength = height.Length;
 	}
 
 	// Update is called once per frame
