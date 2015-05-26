@@ -44,6 +44,11 @@ public class GenerateWaterMesh : MonoBehaviour {
 		waterMesh.RecalculateNormals();
 		waterMesh.name = "WaterMesh";
 		
+		waterMeshFilter.mesh.Clear();
+		waterMeshFilter.mesh = waterMesh;
+		
+		return vertices2dArray;
+		
 		
 		
 		
