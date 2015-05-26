@@ -73,6 +73,8 @@ public class WaterWakes : MonoBehaviour {
 			float q_n_square = ((float)n*delta_q) * ((float)n *delta_q);
 			G_zero += q_n_square * Mathf.Exp(-sigma*q_n_square);
 		}
+		
+		return G_zero;
 	}
 	
 	
