@@ -15,8 +15,16 @@ public class WaterWakes : MonoBehaviour
     float g = -9.81f; //gravity
     float[,] storedKernelArray;
 
-
-
+		//2.2
+	Vector3[][] height;
+	Vector3[][] previousHeight;
+	Vector3[][] verticalDerivative;
+	public Vector3[][] source;
+	public Vector3[][] obstruction;
+	public Vector3[] unfolded_verts;
+	public Vector3[][] heightDifference;
+	int arrayLength;
+	float updateTimer = 0f;
 
     void Start()
     {
