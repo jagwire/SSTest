@@ -60,6 +60,14 @@ public class WaterWakes : MonoBehaviour
 	
 	}
 
+	Vector3[][] CloneList(Vector3[][] arrayToClone) {
+		Vector3[][] newArray = arrayToClone.Clone() as Vector3[][];
+		for(int i = 0; i < newArray.Length; i++) {
+			newArray[i] = newArray[i].Clone() as Vector3[];
+		}
+		
+		return newArray;
+	}
 	
 
 
