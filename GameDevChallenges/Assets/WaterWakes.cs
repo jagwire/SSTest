@@ -59,6 +59,8 @@ public class WaterWakes : MonoBehaviour {
 			
 		}
 		
+		G /= G_zero;
+		return G;
 		
 	}
 	
