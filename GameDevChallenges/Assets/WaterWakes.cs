@@ -77,6 +77,14 @@ public class WaterWakes : MonoBehaviour {
 		return G_zero;
 	}
 	
+	private float BesselFunction(float x) {
+		float J_zero_of_X = 0f;
+		
+		if(x <= 3.0f) { Debug.Log("Smaller"); }
+		
+		
+	}
+	
 	
 	
 	// Update is called once per frame
