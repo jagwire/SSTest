@@ -34,6 +34,21 @@ public class WaterWakes : MonoBehaviour {
 		PrecomputeKernelValues();
 	}
 	
+	void PrecomputeKernelValues() {
+		
+		float G_zero = CalculateG_zero();
+		
+		for(int k = -P; k <= P; k++) {
+			for(int l = -P; l <= P; l++) {
+				storedKernelArray[k+P, l+P] = CalculateG((float)k, (float)l, G_zero);
+			}
+		}
+	}
+	
+	
+	
+	
+	
 	// Update is called once per frame
 	void Update () {
 	
