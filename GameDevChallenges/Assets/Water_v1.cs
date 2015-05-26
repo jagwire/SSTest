@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Water : MonoBehaviour {
+public class Water_v1 : MonoBehaviour {
 	
 	public struct Flux {
 		public float l;
