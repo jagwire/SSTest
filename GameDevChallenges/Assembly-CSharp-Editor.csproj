@@ -52,10 +52,10 @@
      <None Include="Assets\Test\TestKernel.shader" />
      <None Include="Assets\WaterKernels\HeightPass.shader" />
      <None Include="Assets\GLSL Shaders\PassThru.shader" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Water\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\WaterKernels\FluxPass.shader" />
      <None Include="Assets\KernelTry1.shader" />
-     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+     <None Include="Assets\Water\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\WaterKernels\VolumePass.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -86,8 +86,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{1462BEEB-BDF0-860F-FC4F-926A7372D86A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{D7A87CF1-651A-B650-3DCC-7A5EB0FC3302}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
