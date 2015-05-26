@@ -47,10 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GenerateCubes.cs" />
-     <Compile Include="Assets\IHeights.cs" />
-     <Compile Include="Assets\MouseOverBehavior.cs" />
-     <Compile Include="Assets\MoveUpAndDown.cs" />
      <Compile Include="Assets\Test\TestBlit.cs" />
+     <Compile Include="Assets\Water\IHeights.cs" />
+     <Compile Include="Assets\Water\MouseOverBehavior.cs" />
+     <Compile Include="Assets\Water\MoveUpAndDown.cs" />
      <Compile Include="Assets\Water\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
      <Compile Include="Assets\Water\Standard Assets\Cameras\Scripts\AutoCam.cs" />
      <Compile Include="Assets\Water\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
@@ -79,7 +79,7 @@
      <None Include="Assets\GLSL Shaders\PassThru.shader" />
      <None Include="Assets\Water\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Water\WaterKernels\FluxPass.shader" />
-     <None Include="Assets\KernelTry1.shader" />
+     <None Include="Assets\Water\KernelTry1.shader" />
      <None Include="Assets\Water\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\Water\WaterKernels\VolumePass.shader" />
  <Reference Include="UnityEngine.UI">
