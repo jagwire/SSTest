@@ -31,6 +31,7 @@ public class WaterWakes : MonoBehaviour {
 		
 		//part 2
 		storedKernelArray = new float[P*2+1, P*2+1];
+		PrecomputeKernelValues();
 	}
 	
 	// Update is called once per frame
