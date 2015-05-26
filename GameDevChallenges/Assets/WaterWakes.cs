@@ -10,7 +10,7 @@ public class WaterWakes : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		waterMeshFilter - this.GetComponent<MeshFilter>();
+		waterMeshFilter = this.GetComponent<MeshFilter>();
 		List<Vector3[]> height_tmp = GenerateWaterMesh.GenerateWater(waterMeshFilter, waterWidth, gridSpacing);	
 	}
 	
