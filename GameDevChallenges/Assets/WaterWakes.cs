@@ -36,6 +36,12 @@ public class WaterWakes : MonoBehaviour
         PrecomputeKernelValues();
     }
 
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+
     void PrecomputeKernelValues()
     {
 
