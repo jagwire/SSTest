@@ -50,13 +50,13 @@
      <Compile Include="Assets\Editor\VSCodeUnity\CopyDirectory.cs" />
      <Compile Include="Assets\Editor\VSCodeUnity\VSCodeUnity.cs" />
      <None Include="Assets\Test\TestKernel.shader" />
-     <None Include="Assets\WaterKernels\HeightPass.shader" />
+     <None Include="Assets\Water\WaterKernels\HeightPass.shader" />
      <None Include="Assets\GLSL Shaders\PassThru.shader" />
      <None Include="Assets\Water\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\WaterKernels\FluxPass.shader" />
+     <None Include="Assets\Water\WaterKernels\FluxPass.shader" />
      <None Include="Assets\KernelTry1.shader" />
      <None Include="Assets\Water\Standard Assets\Cameras\CameraGuidelines.txt" />
-     <None Include="Assets\WaterKernels\VolumePass.shader" />
+     <None Include="Assets\Water\WaterKernels\VolumePass.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
