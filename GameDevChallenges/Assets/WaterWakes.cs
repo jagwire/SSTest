@@ -8,7 +8,15 @@ public class WaterWakes : MonoBehaviour {
 	float waterWidth = 3f;
 	float gridSpacing = 0.1f;
 
-	// Use this for initialization
+	//part 2
+	public float alpha = 0.9f;
+	int P = 8; //kernel size
+	float g = -9.81f; //gravity
+	float [,] storedKernelArray;
+
+
+
+
 	void Start () {
 		waterMeshFilter = this.GetComponent<MeshFilter>();
 		List<Vector3[]> height_tmp = GenerateWaterMesh.GenerateWater(waterMeshFilter, waterWidth, gridSpacing);	
