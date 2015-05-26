@@ -45,6 +45,23 @@ public class WaterWakes : MonoBehaviour {
 		}
 	}
 	
+	private float CalculateG(float k, float l, float G_zero) {
+		float delta_q = 0.001f;
+		float sigma = 1f;
+		float r = Mathf.Sqrt(k*k+l*l);
+		
+		float G = 0f;
+		for(int n = 1; n <= 10000; n++) {
+			float q_n = ((float) n*delta_q);
+			float q_n_square = q_n*q_n;
+			
+			G+= q_n_square * Mathf.Exp(-sigma*q_n_square) * BesselFunction(q_n * r);
+			
+		}
+		
+		
+	}
+	
 	
 	
 	
