@@ -48,10 +48,5 @@ public class GenerateWaterMesh : MonoBehaviour {
 		waterMeshFilter.mesh = waterMesh;
 		
 		return vertices2dArray;
-		
-		
-		
-		
-		
 	}
 }
