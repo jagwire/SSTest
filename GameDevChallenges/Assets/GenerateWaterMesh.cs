@@ -2,14 +2,7 @@
 using System.Collections;
 
 public class GenerateWaterMesh : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public static List<Vector3[]> GenerateWater(MeshFilter waterMeshFilter, float size, float spacing) {
+		
 	}
 }
