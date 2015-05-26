@@ -50,12 +50,18 @@ public class WaterWakes : MonoBehaviour
 		source = CloneList(height);
 		obstruction = CloneList(height);
 		heightDifference = CloneList(height);
-    }
+    
+		unfolded_verts = new Vector3[height.Length*height.Length];
+	}
 
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+	
+
+
 
 
     void PrecomputeKernelValues()
