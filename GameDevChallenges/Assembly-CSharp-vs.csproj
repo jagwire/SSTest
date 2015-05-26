@@ -46,8 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GenerateCubes.cs" />
-     <Compile Include="Assets\Test\TestBlit.cs" />
+     <Compile Include="Assets\Water\GenerateCubes.cs" />
      <Compile Include="Assets\Water\IHeights.cs" />
      <Compile Include="Assets\Water\MouseOverBehavior.cs" />
      <Compile Include="Assets\Water\MoveUpAndDown.cs" />
@@ -71,12 +70,13 @@
      <Compile Include="Assets\Water\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\Water\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
      <Compile Include="Assets\Water\TerrainMouseOver.cs" />
+     <Compile Include="Assets\Water\Test\TestBlit.cs" />
      <Compile Include="Assets\Water\WaterCubes.cs" />
      <Compile Include="Assets\Water\Water_v1.cs" />
      <Compile Include="Assets\Water\Water_v2.cs" />
-     <None Include="Assets\Test\TestKernel.shader" />
+     <None Include="Assets\Water\Test\TestKernel.shader" />
      <None Include="Assets\Water\WaterKernels\HeightPass.shader" />
-     <None Include="Assets\GLSL Shaders\PassThru.shader" />
+     <None Include="Assets\Water\GLSL Shaders\PassThru.shader" />
      <None Include="Assets\Water\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Water\WaterKernels\FluxPass.shader" />
      <None Include="Assets\Water\KernelTry1.shader" />

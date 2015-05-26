@@ -49,9 +49,9 @@
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
      <Compile Include="Assets\Editor\VSCodeUnity\CopyDirectory.cs" />
      <Compile Include="Assets\Editor\VSCodeUnity\VSCodeUnity.cs" />
-     <None Include="Assets\Test\TestKernel.shader" />
+     <None Include="Assets\Water\Test\TestKernel.shader" />
      <None Include="Assets\Water\WaterKernels\HeightPass.shader" />
-     <None Include="Assets\GLSL Shaders\PassThru.shader" />
+     <None Include="Assets\Water\GLSL Shaders\PassThru.shader" />
      <None Include="Assets\Water\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Water\WaterKernels\FluxPass.shader" />
      <None Include="Assets\Water\KernelTry1.shader" />
