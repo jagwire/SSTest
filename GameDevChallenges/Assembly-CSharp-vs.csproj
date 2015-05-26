@@ -52,8 +52,8 @@
      <Compile Include="Assets\MoveUpAndDown.cs" />
      <Compile Include="Assets\TerrainMouseOver.cs" />
      <Compile Include="Assets\Test\TestBlit.cs" />
-     <Compile Include="Assets\Water.cs" />
      <Compile Include="Assets\WaterCubes.cs" />
+     <Compile Include="Assets\Water_v1.cs" />
      <Compile Include="Assets\Water_v2.cs" />
      <None Include="Assets\Test\TestKernel.shader" />
      <None Include="Assets\WaterKernels\HeightPass.shader" />
