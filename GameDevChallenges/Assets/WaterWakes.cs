@@ -15,9 +15,11 @@ public class WaterWakes : MonoBehaviour {
 		
 		waterMesh = waterMeshFilter.mesh;
 		
-		BoxCollider boxCollider - this.GetComponent<BoxCollider>();
+		BoxCollider boxCollider = this.GetComponent<BoxCollider>();
 		boxCollider.center = new Vector3(waterWidth/2.0f, 0.0f, waterWidth/2.0f );
+		boxCollider.size = new Vector3(waterWidth, 0.1f, waterWidth);
 		
+		transform.position = new Vector3(-waterWidth/2.0f, 0f, -waterWidth/2.0f);
 	}
 	
 	// Update is called once per frame
