@@ -28,6 +28,9 @@ public class WaterWakes : MonoBehaviour {
 		boxCollider.size = new Vector3(waterWidth, 0.1f, waterWidth);
 		
 		transform.position = new Vector3(-waterWidth/2.0f, 0f, -waterWidth/2.0f);
+		
+		//part 2
+		storedKernelArray = new float[P*2+1, P*2+1];
 	}
 	
 	// Update is called once per frame
