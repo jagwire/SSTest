@@ -85,6 +85,48 @@ public class WaterWakes : MonoBehaviour
 		waterMesh.RecalculateBounds();
 		waterMesh.RecalculateNormals();
 	}
+	
+	void AddWaterWakes(float dt) {
+		for(int j = 0; j < arrayLength; j++) {
+			for(int i = 0; i < arrayLength; i++) {
+				height[j][i].y += source[j][i].y;
+				
+				source[j][i].y = 0.0f;
+				
+				height[j][i].y *= obstruction[j][i].y;
+			}
+		}
+		
+		Convolve();
+		
+		float twoMinusAlphaTimesDt = 2f - alpha*dt;
+		float onePlusAlphaTimesDt = 1f+alpha*dt;
+		float gravityTimesDtTimesDt = g * dt * dt;
+		
+		for(int j = 0; j < arrayLength; j++) {
+			for(int i = 0; i < arrayLength; i++) {
+				float currentHeight = height[j][i].y;
+				float newHeight = 0f;
+				
+				newHeight += currentHeight*twoMinusAlphaTimesDt;
+				newHeight -= previousHeight[j][i].y;
+				newHeight -= gravityTimesDtTimesDt * verticalDerivative[j][i].y;
+				newHeight /= onePlusAlphaTimesDt;
+				
+				previousHeight[j][i].y = currentHeight;
+				
+				height[j][i].y = newHeight;
+				float heightAmbientWave = 0f;
+				
+				heightDifference[j][i].y = heightAmbientWave + newHeight;
+				
+				
+				
+			}
+		}
+		
+		
+	}
 
 
 
