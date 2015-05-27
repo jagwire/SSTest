@@ -55,10 +55,7 @@ public class WaterWakes : MonoBehaviour
 		arrayLength = height.Length;
 	}
 
-	// Update is called once per frame
-	void Update () {
 	
-	}
 
 	Vector3[][] CloneList(Vector3[][] arrayToClone) {
 		Vector3[][] newArray = arrayToClone.Clone() as Vector3[][];
@@ -69,7 +66,14 @@ public class WaterWakes : MonoBehaviour
 		return newArray;
 	}
 	// READY FOR UPDATE, MOVE WATER, ETC...
-
+	// Update is called once per frame
+	void Update () {
+		updateTimer += Time.deltaTime;
+		if(updateTimer > 0.02f) {
+			MoveWater(0.02f);
+			updateTimer = 0.0f;
+		}
+	}
 
 
 
