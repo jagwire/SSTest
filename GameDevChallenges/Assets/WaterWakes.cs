@@ -75,6 +75,17 @@ public class WaterWakes : MonoBehaviour
 		}
 	}
 
+	void MoveWater(float dt) {
+		AddWaterWakes(dt);
+		for(int i = 0; i < arrayLength; i++) {
+			heightDifference[i].CopyTo(unfolded_verts, i*heightDifference.Length);
+		}
+		
+		waterMesh.vertices = unfolded_verts;
+		waterMesh.RecalculateBounds();
+		waterMesh.RecalculateNormals();
+	}
+
 
 
     void PrecomputeKernelValues()
