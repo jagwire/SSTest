@@ -131,11 +131,12 @@ public class WaterWakes : MonoBehaviour
 				float heightAmbientWave = 0f;
 				
 				heightDifference[j][i].y = heightAmbientWave + newHeight;
-				
-				
-				
 			}
 		}	
+	}
+	
+	void Convolve() {
+		
 	}
 	
 	
