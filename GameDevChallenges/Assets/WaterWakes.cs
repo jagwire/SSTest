@@ -53,6 +53,18 @@ public class WaterWakes : MonoBehaviour
     
 		unfolded_verts = new Vector3[height.Length*height.Length];
 		arrayLength = height.Length;
+		
+		//add obstructions
+		for(int x = 0; x < arrayLength; x++) {
+			for(int y = 0; y < arrayLength; y++) {
+				if(x == 0 || x == arrayLength - 1 || y == 0 || y == arrayLength - 1 ) {
+					obstruction[x][y].y = 0f;
+				} else {
+					obstruction[x][y].y = 1f;
+				}
+			}
+		}
+		
 	}
 
 	
@@ -123,10 +135,10 @@ public class WaterWakes : MonoBehaviour
 				
 				
 			}
-		}
-		
-		
+		}	
 	}
+	
+	
 
 
 
